@@ -1,6 +1,6 @@
 ---
 layout: lesson
-visible: true
+visible: false
 ---
 
 # Lesson 5 - Kepler's Planets, Orbits in 3D & Other Python Solvers: Choose your own adventure

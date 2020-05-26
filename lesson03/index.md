@@ -1,6 +1,6 @@
 ---
 layout: lesson
-visible: true
+visible: false
 ---
 
 # Lesson 3 - 2Body Problem Numerical Solutions

@@ -1,6 +1,6 @@
 ---
 layout: lesson
-visible: true
+visible: false
 ---
 
 # Lesson 2 - More on gravity and the two body problem

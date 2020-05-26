@@ -1,6 +1,6 @@
 ---
 layout: lesson
-visible: true
+visible: false
 ---
 
 # Lesson 4 - Multi-body Problem: A better solution
