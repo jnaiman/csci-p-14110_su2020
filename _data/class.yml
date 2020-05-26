@@ -1,25 +1,25 @@
 instructor: 
   name: Jill P. Naiman
-  email: jnaiman@illinois.edu
-  office: Science Center Library/Annenberg Dinning Hall
-  office_hours: ~3pm to ~4:30pm/4:30pm - 5pm(ish)
+  email: jnaiman@illinois.edu, jill.naiman@cfa.harvard.edu
+  office: TBD
+  office_hours: TBD
 tas:
   -
-    name: Adrianna Perez
-    email: adrianna.perez@cfa.harvard.edu
-    office: Slack Channel
-    office_hours: Slack Channel
+    name: Monica
+    email: TBD
+    office: TBD
+    office_hours: TBD
 course:
-  name: Intro to Scientific Computing and Data Viz
-  number: CSCI P-14100
-  semester: Summer 2019
+  name: Intro to Programming and Data Viz
+  number: CSCI P-14110
+  semester: Summer 2020
   location: Campus
-  time: M/T/W/Th/F, 12-3pm
+  time: M/T/W/Th/F, 12-3pm (EST)
   credit_hours: NA
 urls:
   -
     name: Canvas Page
-    url: https://canvas.harvard.edu/courses/57025
+    url: TBD
   -
     name: Slack
-    url: https://cscip14110sum-arr8217.slack.com
+    url: TBD
