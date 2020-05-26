@@ -1,0 +1,47 @@
+DAY1
+----
+X - 2D movies -> saving
+X - pandas
+X- plot formatting with an ipywidget (histogram of eccentricities)
+X- histogram binning with ipywdiget (hist of ecc)
+HW: the "make a plot like a plot" 
+
+DAY2
+----
+X- ipywidgets -> more extensive intro of all things
+X- ipywidgets -> plotting analytical orbits, example & exercise
+X - heat map interactive ecc vs something -> plot analytical orbits
+X   -> could be star mass, star radius or something?
+X   -> this uses bqplot
+X - lecture topic: grammar of graphics (parts of week 6 lecture)
+HW: plot heatmap of 2 other things?
+
+DAY3
+----
+X - lecture topic: week 12
+X - ipyvolume - quick example from docs
+X - ipyvolume with quivers and numerical data
+X - 3D animations -> to save, give them time do save their own & play
+X - Saving to html, linking to bqplot
+X - deploying to the web (optional)
+- 3D objects - if time, example volume rendering
+
+DAY4
+----
+X - lecture topic: graphics concepts from week 13 (module)
+X - lecture topic: mapping surfaces (module) for planets
+X - how planets look vs. their surfaces
+X - designing for VR
+X - programming - planets - stills
+X - programming - (module) - change color of planet texture (extra)
+X - programming - (module) - uploading galaxy models (extra)
+- lecture topic: viz for self, peers, others (could be day 5, modulaize)
+
+DAY5
+----
+X - lecture topic: what to look into for web publishing
+X - lecture topic (module): 3d movies
+X - programming (module): 3d movies - galaxies and planets
+X - extensions -> few fun things - Idyll, Houdini, etc
+X - finishing up projects
+- viz party!

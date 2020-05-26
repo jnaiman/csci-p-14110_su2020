@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+<!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Lesson 3 - 2Body Problem Numerical Solutions | CSCI P-14110 Introduction to Programming, Computational Science, and Data Visualization</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="Lesson 3 - 2Body Problem Numerical Solutions" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="This is the course website CSCI P-14110" />
+<meta property="og:description" content="This is the course website CSCI P-14110" />
+<link rel="canonical" href="http://localhost:4008/csci-p-14110/lesson03/" />
+<meta property="og:url" content="http://localhost:4008/csci-p-14110/lesson03/" />
+<meta property="og:site_name" content="CSCI P-14110 Introduction to Programming, Computational Science, and Data Visualization" />
+<script type="application/ld+json">
+{"description":"This is the course website CSCI P-14110","headline":"Lesson 3 - 2Body Problem Numerical Solutions","@type":"WebPage","url":"http://localhost:4008/csci-p-14110/lesson03/","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link href='https://fonts.googleapis.com/css?family=Arvo:400,700,400italic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="/csci-p-14110/assets/css/style.css?v=HEAD">
+    <script src="/csci-p-14110/assets/js/scale.fix.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h2 class="header"><font color="white">CSCI P-14110 Introduction to Programming, Computational Science, and Data Visualization</font></h2>
+        <p class="header">This is the course website CSCI P-14110</p>
+
+        <ul>
+          
+          <!--<li><a class="buttons github" href="https://github.com/jnaiman/csci-p-14110_su2020">View On GitHub</a></li>-->
+        </ul>
+
+      </header>
+
+      <section>
+                <h1 id="lesson-3---2body-problem-numerical-solutions">Lesson 3 - 2Body Problem Numerical Solutions</h1>
+
+<p>Extra notes:</p>
+
+<ul>
+  <li><a href="/csci-p-14110/lesson03/Part1_programming_analyticalVSNumeric_lesson03.pdf">Part1_programming_analyticalVSNumeric_lesson03.pdf</a></li>
+  <li><a href="/csci-p-14110/lesson03/Part2_programming_full2Body_lesson02_notes.pdf">Part2_programming_full2Body_lesson02_notes.pdf</a></li>
+</ul>
+
+<h2 id="resources">Resources</h2>
+
+<p>Below are some extra resources to learn about the topics we discussed.  Some will be required for the HW and will be listed on the Canvas webpage, while others are left up to you!</p>
+
+<ul>
+  <li><a href="https://www.khanacademy.org/science/physics/work-and-energy/work-and-energy-tutorial/v/conservation-of-energy">Conservation of Energy - Khan</a></li>
+  <li><a href="http://www.bogan.ca/orbits/kepler/orbteqtn.html">List of equations for different types of orbits</a></li>
+  <li><a href="https://www.youtube.com/watch?v=w4QFJb9a8vo">Physics Crash Course - Work, Energy (&amp; Power)</a></li>
+</ul>
+
+<h3 id="derivations">Derivations</h3>
+
+<ul>
+  <li><a href="https://www.astro.umd.edu/~ricotti/NEWWEB/teaching/ASTR415/class18.pdf">N-body “Cheat Sheet” (Calculus)</a></li>
+  <li><a href="https://arxiv.org/pdf/1803.06770.pdf">Kepler’s Laws with and without Calculus</a></li>
+  <li><a href="https://arxiv.org/pdf/0812.2755.pdf">Kepler’s Laws without Calculus</a></li>
+  <li><a href="https://www.math.ksu.edu/~dbski/writings/planetary.pdf">Kepler’s Laws <em>with</em> Calculus</a></li>
+  <li><a href="https://www.uu.edu/dept/math/SeniorPapers/09-10/DavisEmily.pdf">Slides on Kepler’s Laws Derivation <em>with</em> Calculus</a></li>
+  <li><a href="http://web.physics.ucsb.edu/~fratus/phys103/LN/TBP.pdf">Two body motion <em>with</em> Calculus</a></li>
+  <li><a href="http://web.mit.edu/8.01t/www/materials/modules/guide17.pdf">Kepler Problem as it relates to the Bohr atom (Calculus)</a></li>
+  <li><a href="https://www.khanacademy.org/partner-content/nasa/measuringuniverse/orbital-mechanics/a/keplers-first-law">History of Kepler &amp; Newton’s Laws of Motion for Planets</a></li>
+  <li><a href="https://www.youtube.com/watch?v=mRbDmvvALQA">A series of lectures about Kepler’s Laws (Calculus)</a></li>
+</ul>
+
+
+
+        <h3>Materials</h3>
+        <ul>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+	
+        <li>Lecture 3, Part 1 - Kepler's Laws, Ellipses and Orbital Motion: (<a href="/csci-p-14110/lesson03/lecture03_p1.html">view</a>,
+          <a href="https://github.com/jnaiman/csci-p-14110_su2020/blob/gh-pages/lesson03/lecture03_p1.md">source</a>, <a href="/csci-p-14110/lesson03/lecture03_p1.html?showNotes=false">present</a>)</li>
+	
+	
+        
+        
+        
+	
+        <li>Lecture 3, Part 2 - Full Two Body Motion: (<a href="/csci-p-14110/lesson03/lecture03_p2.html">view</a>,
+          <a href="https://github.com/jnaiman/csci-p-14110_su2020/blob/gh-pages/lesson03/lecture03_p2.md">source</a>, <a href="/csci-p-14110/lesson03/lecture03_p2.html?showNotes=false">present</a>)</li>
+	
+	
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+<!--        
+        
+        
+        
+        
+        <li>PDF Part1_programming_analyticalVSNumeric_lesson03: 
+         (<a href="/csci-p-14110/lesson03/Part1_programming_analyticalVSNumeric_lesson03.pdf">view</a>
+        </li>
+        
+        
+        
+        <li>PDF Part2_programming_full2Body_lesson02_notes: 
+         (<a href="/csci-p-14110/lesson03/Part2_programming_full2Body_lesson02_notes.pdf">view</a>
+        </li>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        -->
+	
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <li>Notebook Part1_programming_analyticalVSNumeric_lesson03: 
+         (<a href="../nbv.html?notebook_name=%2Fcsci-p-14110%2Flesson03%2FPart1_programming_analyticalVSNumeric_lesson03.ipynb">view</a>,
+         <a href="/csci-p-14110/lesson03/Part1_programming_analyticalVSNumeric_lesson03.ipynb">download</a>)</li>
+        
+        
+        
+        <li>Notebook Part2_programming_full2Body_lesson02_notes: 
+         (<a href="../nbv.html?notebook_name=%2Fcsci-p-14110%2Flesson03%2FPart2_programming_full2Body_lesson02_notes.ipynb">view</a>,
+         <a href="/csci-p-14110/lesson03/Part2_programming_full2Body_lesson02_notes.ipynb">download</a>)</li>
+        
+        
+        
+        <li>Notebook inClass_lesson03: 
+         (<a href="../nbv.html?notebook_name=%2Fcsci-p-14110%2Flesson03%2FinClass_lesson03.ipynb">view</a>,
+         <a href="/csci-p-14110/lesson03/inClass_lesson03.ipynb">download</a>)</li>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        </ul>
+
+      </section>
+
+      <footer>
+        <p><small>Hosted on <a href="https://pages.github.com">GitHub Pages</a> using the Dinky theme</small></p>
+      </footer>
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+    
+  </body>
+</html>

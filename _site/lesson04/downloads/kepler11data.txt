@@ -1,0 +1,39 @@
+# columns are:
+# (1) Row ID from table
+# (2) System Name
+# (3) planet letter
+# (4) Number of total planets in system
+# (5) Orbital period in days
+# (6) Upper error in Orbital Period (P_orb +/- (upper error)/(lower error)) in days
+# (7) Lower error in orbital period in days
+# (8) Semi-major axis  in AU
+# (9) Error in semi major axis (a +/- ea)
+# (10) Eccentricity
+# (11) Upper error in eccentricity
+# (12) Lower error in eccentricity
+# (13) Inclination in degrees
+# (14) Upper error in inclination
+# (15) Lower error in inclination
+# (16) Planet's mass in Jupiter mass (or M*sin(i) if given)
+# (15) Upper error in planet's mass in jupiter masses
+# (16) Lower error in planet's mass in jupieter masses
+# (17) Mass type ('Mass' or 'Msini' - tells you what is the "mass" you actually measure)
+# (18) Star's mass in solar masses
+# (19) Error in star's mass
+# (20) Star's radius in solar radii
+# (21) Upper error in star's radius
+# (22) Lower error in star's radius
+# (23) Transit time in Julian days since a given time: from: Lissauer et al. June 20, 2013, ApJ 770, 131
+# (24) Upper error in transit time
+# (25) Lower error in transit time
+#
+# Further notes:
+# the "-100.0" in the last row denote the fact that 0.15 and 0.079 are an upper limit
+# Data from Kepler confirmed planet website: http://exoplanetarchive.ipac.caltech.edu/cgi-bin/TblView/nph-tblView?app=ExoTbls&config=planets
+#
+902,Kepler-11 ,b,6,10.3039, 0.0006, -0.0010, 0.091, 0.001, 0.045, 0.068, -0.042, 89.64, 0.36, -0.18, 0.006, 0.004, -0.003, Mass, 0.961, 0.025, 1.065, 0.017, -0.022, 689.7378, 0.0026, -0.0047
+903,Kepler-11 ,c,6,13.0241, 0.0013, -0.0008, 0.107, 0.001, 0.026, 0.063, -0.013, 89.59, 0.41, -0.16, 0.009, 0.009, -0.005, Mass, 0.961, 0.025, 1.065, 0.017, -0.022, 683.3494, 0.0014, -0.0019
+904,Kepler-11 ,d,6,22.6845, 0.0009, -0.0009, 0.155, 0.001, 0.004, 0.007, -0.002, 89.67, 0.13, -0.16, 0.023, 0.003, -0.005, Mass, 0.961, 0.025, 1.065, 0.017, -0.022, 694.0069, 0.0022, -0.0014
+905,Kepler-11 ,e,6,31.9996, 0.0008, -0.0012, 0.195, 0.002, 0.012, 0.006, -0.006, 88.89, 0.02, -0.02, 0.025, 0.005, -0.007, Mass, 0.961, 0.025, 1.065, 0.017, -0.022, 695.0755, 0.0015, -0.0009
+906,Kepler-11 ,f,6,46.6888, 0.0027, -0.0032, 0.250, 0.002, 0.013, 0.011, -0.009, 89.47, 0.04, -0.04, 0.006, 0.003, -0.003, Mass, 0.961, 0.025, 1.065, 0.017, -0.022, 718.2710, 0.0041, -0.0038
+907,Kepler-11 ,g,6,118.3807,0.0010, -0.0006, 0.466, 0.004, 0.15, -100.0, -100.0, 89.87, 0.05, -0.06, 0.079,-100.0, -100.0, Mass, 0.961, 0.025, 1.065, 0.017, -0.022, 693.8021, 0.0030, -0.0021

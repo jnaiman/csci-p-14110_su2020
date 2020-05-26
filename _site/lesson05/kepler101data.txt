@@ -1,0 +1,35 @@
+# columns are:
+# (1) Row ID from table
+# (2) System Name
+# (3) planet letter
+# (4) Number of total planets in system
+# (5) Orbital period in days
+# (6) Upper error in Orbital Period (P_orb +/- (upper error)/(lower error)) in days
+# (7) Lower error in orbital period in days
+# (8) Semi-major axis  in AU
+# (9) Error in semi major axis (a +/- ea)
+# (10) Eccentricity
+# (11) Upper error in eccentricity
+# (12) Lower error in eccentricity
+# (13) Inclination in degrees
+# (14) Upper error in inclination
+# (15) Lower error in inclination
+# (16) Planet's mass in Jupiter mass (or M*sin(i) if given)
+# (15) Upper error in planet's mass in jupiter masses
+# (16) Lower error in planet's mass in jupieter masses
+# (17) Mass type ('Mass' or 'Msini' - tells you what is the "mass" you actually measure)
+# (18) Star's mass in solar masses
+# (19) Error in star's mass
+# (20) Star's radius in solar radii
+# (21) Upper error in star's radius
+# (22) Lower error in star's radius
+# (23) Transit time in Julian days since a given time: from: Bonomo et al 2014 - http://arxiv.org/abs/1409.4592
+# (24) Upper error in transit time
+# (25) Lower error in transit time
+#
+# Further notes:
+# the "-100.0" in the last row denote upper limits
+# Data from Kepler confirmed planet website: http://exoplanetarchive.ipac.caltech.edu/cgi-bin/TblView/nph-tblView?app=ExoTbls&config=planets
+#
+779,Kepler-101 ,b,2,3.4876812, 0.0000070, -0.0000070, 0.0474, 0.009,  0.086, 0.080, -0.059, 85.82, 1.73, -1.53, 0.16,  0.02, -0.01, Mass, 1.17, 0.06,  1.56, 0.20, -0.20, 288.77995, 0.00041, -0.00041
+780,Kepler-101 ,c,2,6.029760,  0.000075,  -0.000075,  0.0684, 0.0014, 0,     -100., -100.,  84.6,  3.4,  -3.1,  0.01, -100., -100., Mass, 1.17, 0.06,  1.56, 0.20, -0.20, 65.4860,   0.0088,  -0.0088

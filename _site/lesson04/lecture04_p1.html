@@ -1,0 +1,310 @@
+<!doctype html>
+<html>
+  <head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+<title>Lecture 4, Part 1 - Higher order solvers</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/css/reveal.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/css/theme/white.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+<!-- Theme used for syntax highlighting of code -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+<link href="https://fonts.googleapis.com/css?family=Questrial" rel="stylesheet">
+
+<!-- Printing and PDF exports -->
+<script>
+    var link = document.createElement( 'link' );
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match( /print-pdf/gi ) ?  '/revealjs/css/print/pdf.css' : '/revealjs/css/print/paper.css';
+    document.getElementsByTagName( 'head' )[0].appendChild( link );
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/lib/js/head.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/js/reveal.min.js"></script>
+
+
+<style type="text/css">
+.reveal section.present {
+  text-align: left;
+}
+.centered {
+  text-align: center;
+}
+.reveal {
+  font-size: 30px;
+  font-family: 'Questrial', sans-serif;
+}
+.reveal section img {
+  box-shadow: none;
+  border: 0px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.reveal bigtext {
+  font-size: 800%;
+}
+
+.reveal h1, .reveal h2, .reveal h3 {
+  text-transform: none;
+}
+
+.reveal .titleslide h1 {
+  text-align: center;
+}
+.reveal .titleslide h2 {
+  text-align: right;
+}
+
+.vertical_center section {
+  vertical-align: middle;
+}
+
+.left_abs {
+  left:0%;
+  text-align: left;
+  float: left;
+  width:50%;
+  z-index:-10;
+}
+
+.left {
+  left:-8.33%;
+  text-align: left;
+  float: left;
+  width:50%;
+  z-index:-10;
+}
+
+.right {
+  left:31.25%;
+  top: 75px;
+  float: right;
+  text-align: right;
+  z-index:-10;
+  width:50%;
+}
+
+.reveal table td {
+  text-align: left;
+  padding: 0.2em 0.5em 0.2em 0.5em;
+  border: solid; 
+}
+
+.reveal table tbody tr:last-child th,
+.reveal table tbody tr:last-child td {
+  border-bottom: solid; }
+
+.reveal .table-hl {
+  background: #aaa;
+}
+
+
+
+</style>
+  </head>
+
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section data-markdown
+           data-separator="^\n---\n"
+           data-separator-vertical="^\n----\n"
+           data-separator-notes="notes?:"
+           >
+          <script type="text/template">
+## Numerical Solutions: Can we do better?
+
+<!--<img src="../lesson03/images/loop_animation.png" width="700" />-->
+<img src="../lesson03/myAnimation.gif">
+
+notes: as we saw, our simulations are not numerically stable - i.e. they do not conserve mass and momentum
+
+this is a feature of *all* numerical models
+
+but we can play some numerical tricks to make our solutions more accurate
+
+---
+
+## Numerical Solutions: Can we do better?
+
+<img src="../lesson03/images/loop_animation.png" width="700" />
+
+Increase accuracy with:
+ 1. smaller time steps
+ 1. a *higher order* solver
+ 
+notes: we saw that we could increase the accuracy of our solutions by increasing the number of steps per period or 
+decreasing the time step length
+
+we can also choose a different solver than the Euler's for higher accuracy!
+
+---
+
+## Numerical Solutions: Can we do better?
+
+Let's re-look at the Euler's Method for gravitation:
+
+$ \vec{r}\_{i+1} = \vec{r}(t + \Delta t) = \vec{r}(t) + \vec{v}(t) \Delta t$
+
+$ \vec{v}\_{i+1} = \vec{v}(t + \Delta t) = \vec{v}(t) + a\_g(\vec{r},t) \Delta t$
+
+---
+
+## Numerical Solutions: Can we do better?
+
+Let's re-look at the Euler's Method for gravitation:
+
+$ \vec{r}\_{i+1} = \vec{r}(t + \Delta t) = \vec{r}(t) + \vec{v}(t) \Delta t + \mathcal{O}(\Delta t^2)$
+
+$ \vec{v}\_{i+1} = \vec{v}(t + \Delta t) = \vec{v}(t) + a\_g(\vec{r},t) \Delta t + \mathcal{O}(\Delta t^2)$
+
+notes: in reality, we have errors on the order of $\Delta t^2$ 
+
+where does this come from?
+
+---
+
+## Numerical Solutions: Can we do better?
+
+Let's re-look at the Euler's Method for gravitation:
+
+$ \vec{r}\_{i+1} = \vec{r}(t + \Delta t) = \vec{r}(t) + \vec{v}(t) \Delta t + \mathcal{O}(\Delta t^2)$
+
+$ \vec{v}\_{i+1} = \vec{v}(t + \Delta t) = \vec{v}(t) + a\_g(\vec{r},t) \Delta t + \mathcal{O}(\Delta t^2)$
+
+**Calculus aside:**
+
+Taylor expansion: $f(x + h) = f(x) + f'(x)h + f''(x) \frac{h^2}{2!} + f'''(x) \frac{h^3}{3!} + ...$
+
+For a time series:
+
+$ \vec{r}(t + \Delta t) = \vec{r}(t) + \vec{r}'(t) \Delta t + \vec{r}''(t) \frac{\Delta t^2}{2!} + \vec{r}'''(t)\frac{\Delta t^3}{3!} + ...$
+
+$ \vec{r}(t + \Delta t) = \vec{r}(t) + \vec{v}(t) \Delta t + \vec{a}(t) \frac{\Delta t^2}{2!} + \vec{a}'(t)\frac{\Delta t^3}{3!} + ...$
+
+
+notes: if you haven't had calculus yet, don't worry about this part, but basically, any function, in this case position as a function of time can be broken down as a series of derivatives multiplied by $\Delta t$ - you see we take derivatives up to the derivative of the acceleration here in this case
+
+we increase the accuracy of our simulations by taking *higher order terms*
+
+There are many ways of doing this with a variety of solvers.  We'll first try with the *Hermite Solver*
+
+---
+
+## Numerical Solutions: Can we do better?
+
+Let's re-look at the Euler's Method for gravitation:
+
+$ \vec{r}\_{i+1} = \vec{r}(t + \Delta t) = \vec{r}(t) + \vec{v}(t) \Delta t + \mathcal{O}(\Delta t^2)$
+
+$ \vec{v}\_{i+1} = \vec{v}(t + \Delta t) = \vec{v}(t) + a\_g(\vec{r},t) \Delta t + \mathcal{O}(\Delta t^2)$
+
+### Hermite Solver:
+
+**The math:**
+
+main step: 
+
+$ \vec{r}\_{i+1} = \vec{r}\_i + \frac{1}{2}(\vec{v}\_{i+1} + \vec{v}\_i)\Delta t + \frac{1}{12}(\vec{a}\_{i} - \vec{a}\_{i+1}) \Delta t^2 + \mathcal{O}(\Delta t^5) $
+
+$ \vec{v}\_{i+1} = \vec{v}\_i + \frac{1}{2}(\vec{a}\_{i+1} + \vec{a}\_i)\Delta t + \frac{1}{12}(\vec{J}\_{i} - \vec{J}\_{i+1}) \Delta t^2 + \mathcal{O}(\Delta t^5) \, \, \, $  with $J = \frac{\Delta a}{\Delta t}$
+
+$ \vec{r}\_p = \vec{r}\_i + \vec{v}\_i \Delta t + \frac{1}{2} \vec{a}\_i \Delta t^2 + \frac{1}{6} \vec{J}\_i \Delta t^3 $
+
+$ \vec{v}\_p = \vec{v}\_i + \vec{a}\_i \Delta t + \frac{1}{2} \vec{J}\_i \Delta t^2 $
+
+notes: so, you can see that things have gotten a bit more complicated, but we do have orders on order of 5th order!
+
+---
+
+## Hermite Solver: OMG
+
+**The math:**
+
+main step: 
+
+$ \vec{r}\_{i+1} = \vec{r}\_i + \frac{1}{2}(\vec{v}\_{i+1} + \vec{v}\_i)\Delta t + \frac{1}{12}(\vec{a}\_{i} - \vec{a}\_{i+1}) \Delta t^2 + \mathcal{O}(\Delta t^5) $
+
+$ \vec{v}\_{i+1} = \vec{v}\_i + \frac{1}{2}(\vec{a}\_{i+1} + \vec{a}\_i)\Delta t + \frac{1}{12}(\vec{J}\_{i} - \vec{J}\_{i+1}) \Delta t^2 + \mathcal{O}(\Delta t^5) \, \, \, $  with $J = \frac{\Delta a}{\Delta t}$
+
+$ \vec{r}\_p = \vec{r}\_i + \vec{v}\_i \Delta t + \frac{1}{2} \vec{a}\_i \Delta t^2 + \frac{1}{6} \vec{J}\_i \Delta t^3 $
+
+$ \vec{v}\_p = \vec{v}\_i + \vec{a}\_i \Delta t + \frac{1}{2} \vec{J}\_i \Delta t^2 $
+
+notes: at this point you might be a little nervous that we are going to plug this whole thing into Python again
+
+---
+
+## Hermite Solver: OMG
+
+**The math:**
+
+main step: 
+
+$ \vec{r}\_{i+1} = \vec{r}\_i + \frac{1}{2}(\vec{v}\_{i+1} + \vec{v}\_i)\Delta t + \frac{1}{12}(\vec{a}\_{i} - \vec{a}\_{i+1}) \Delta t^2 + \mathcal{O}(\Delta t^5) $
+
+$ \vec{v}\_{i+1} = \vec{v}\_i + \frac{1}{2}(\vec{a}\_{i+1} + \vec{a}\_i)\Delta t + \frac{1}{12}(\vec{J}\_{i} - \vec{J}\_{i+1}) \Delta t^2 + \mathcal{O}(\Delta t^5) \, \, \, $  with $J = \frac{\Delta a}{\Delta t}$
+
+$ \vec{r}\_p = \vec{r}\_i + \vec{v}\_i \Delta t + \frac{1}{2} \vec{a}\_i \Delta t^2 + \frac{1}{6} \vec{J}\_i \Delta t^3 $
+
+$ \vec{v}\_p = \vec{v}\_i + \vec{a}\_i \Delta t + \frac{1}{2} \vec{J}\_i \Delta t^2 $
+
+**The Idea:** Modular programming
+
+`matplotlib.pyplot` is the plotting library we've been using to simplify how we make images.
+
+We will now use several numerical solver libraries to simplify how we do numerical simulations.
+
+notes: while this might seem like we are "cheating" some how in reality - this is very common.
+
+there is no reason to re-invent the wheel! Large numerical simulations are done by different people working on different aspects of the code, and putting the whole thing together at the end
+
+we will use this idea for doing numerical simulations from now on
+
+(but it *is* good that we at least started by writing our own to understand how it works!)
+
+---
+
+# Let's try this out in Python!
+
+
+          </script>
+        </section>
+      </div>
+    </div>
+<script>
+    // More info about config & dependencies:
+    // - https://github.com/hakimel/reveal.js#configuration
+    // - https://github.com/hakimel/reveal.js#dependencies
+    Reveal.initialize({
+        dependencies: [
+            { src: 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/plugin/markdown/marked.js' },
+            { src: 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/plugin/markdown/markdown.min.js' },
+            { src: 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/plugin/notes/notes.min.js', async: true },
+            { src: 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/plugin/highlight/highlight.min.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+            { src: '/reveal.js-plugins/chalkboard/chalkboard.js' },
+            { src: 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/plugin/math/math.min.js', async: true }
+        ],
+		keyboard: {
+			67: function() { RevealChalkboard.toggleNotesCanvas() },	// toggle notes canvas when 'c' is pressed
+			66: function() { RevealChalkboard.toggleChalkboard() },	// toggle chalkboard when 'b' is pressed
+			46: function() { RevealChalkboard.clear() },	// clear chalkboard when 'DEL' is pressed
+			 8: function() { RevealChalkboard.reset() },	// reset chalkboard data on current slide when 'BACKSPACE' is pressed
+			68: function() { RevealChalkboard.download() },	// downlad recorded chalkboard drawing when 'd' is pressed
+		},
+        center: false,
+        transition: 'none',
+        backgroundTransition: 'none',
+        showNotes: true,
+        progress: false,
+	slideNumber: true,
+
+    });
+</script>
+  </body>
+</html>
+

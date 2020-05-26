@@ -1,0 +1,226 @@
+<!doctype html>
+<html>
+  <head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+<title>Lecture 5, Part 1 - Kepler's Orbits</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/css/reveal.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/css/theme/white.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+<!-- Theme used for syntax highlighting of code -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+<link href="https://fonts.googleapis.com/css?family=Questrial" rel="stylesheet">
+
+<!-- Printing and PDF exports -->
+<script>
+    var link = document.createElement( 'link' );
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match( /print-pdf/gi ) ?  '/revealjs/css/print/pdf.css' : '/revealjs/css/print/paper.css';
+    document.getElementsByTagName( 'head' )[0].appendChild( link );
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/lib/js/head.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/js/reveal.min.js"></script>
+
+
+<style type="text/css">
+.reveal section.present {
+  text-align: left;
+}
+.centered {
+  text-align: center;
+}
+.reveal {
+  font-size: 30px;
+  font-family: 'Questrial', sans-serif;
+}
+.reveal section img {
+  box-shadow: none;
+  border: 0px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.reveal bigtext {
+  font-size: 800%;
+}
+
+.reveal h1, .reveal h2, .reveal h3 {
+  text-transform: none;
+}
+
+.reveal .titleslide h1 {
+  text-align: center;
+}
+.reveal .titleslide h2 {
+  text-align: right;
+}
+
+.vertical_center section {
+  vertical-align: middle;
+}
+
+.left_abs {
+  left:0%;
+  text-align: left;
+  float: left;
+  width:50%;
+  z-index:-10;
+}
+
+.left {
+  left:-8.33%;
+  text-align: left;
+  float: left;
+  width:50%;
+  z-index:-10;
+}
+
+.right {
+  left:31.25%;
+  top: 75px;
+  float: right;
+  text-align: right;
+  z-index:-10;
+  width:50%;
+}
+
+.reveal table td {
+  text-align: left;
+  padding: 0.2em 0.5em 0.2em 0.5em;
+  border: solid; 
+}
+
+.reveal table tbody tr:last-child th,
+.reveal table tbody tr:last-child td {
+  border-bottom: solid; }
+
+.reveal .table-hl {
+  background: #aaa;
+}
+
+
+
+</style>
+  </head>
+
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section data-markdown
+           data-separator="^\n---\n"
+           data-separator-vertical="^\n----\n"
+           data-separator-notes="notes?:"
+           >
+          <script type="text/template">
+# Kepler's Data - Simulating Real Planets
+
+---
+
+## Simulations of our Solar System
+
+<img src="../lesson03/images/slides1/day3_coding.001.jpeg" alt="slide1" width="800"/>
+
+notes: here is a figure from a paper showing several realizations of the orbit of mercury
+
+all of these initial conditions - placement, initial eccentricity, etc - are all within what we think are likely for an early mercury
+
+---
+
+## Simulations of our Solar System
+
+<img src="../lesson03/images/slides1/day3_coding.002.jpeg" alt="slide1" width="800"/>
+
+notes: we can see in some cases the eccentricity grows infinitely - meaning it goes from an elliptical orbit to a parabolic or hyperbolic orbit
+
+---
+
+## Instability of Planetary Systems
+
+<img src="../lesson03/images/slides1/day3_coding.003.jpeg" alt="slide1" width="800"/>
+
+notes: from our investigations and games like super planet crash, we learned that more massive planets tend to destabalize systems
+
+---
+
+## Instability of Planetary Systems
+
+<img src="../lesson03/images/slides1/day3_coding.004.jpeg" alt="slide1" width="800"/>
+
+notes: you also may have found that if you try to put planets close together, that can cause some instability
+
+---
+
+## Instability of Planetary Systems
+
+<img src="../lesson03/images/slides1/day3_coding.005.jpeg" alt="slide1" width="800"/>
+
+notes: here you can read the bottom axis as the "seperation between planets" basically
+
+this is showing how eccentric the planet is vs. how far apart you can make things - if you have very eccentric orbits, you're system is naturally less stable and so you can't cram in planets very close together.
+
+---
+
+## Instability of Planetary Systems - Real Systems
+
+The Kepler Telescope:
+
+<img src="https://exoplanets.nasa.gov/system/downloadable_items/345_Keper_EOF_By_The_Numbers_Mission_Stats.jpg" width="800"/>
+
+notes: as we've mentioned before, a lot of what we know about other planetary systems comes from the Kepler's telescope
+
+now we are going to use actual data from the Kepler telescope to simulate real live planetary systems!
+
+---
+
+# Kepler Systems in Python - reading and writing data!
+
+notes: we'll also talk a bit about how to read and write data in python so you don't have to keep running simulations all the time
+
+this is especially important for data viz next week - you'll want to have some things saved and ready to go
+
+also, if you want to compare simulations - it's nice not to have to re-run a bunch
+
+---
+
+
+
+          </script>
+        </section>
+      </div>
+    </div>
+<script>
+    // More info about config & dependencies:
+    // - https://github.com/hakimel/reveal.js#configuration
+    // - https://github.com/hakimel/reveal.js#dependencies
+    Reveal.initialize({
+        dependencies: [
+            { src: 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/plugin/markdown/marked.js' },
+            { src: 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/plugin/markdown/markdown.min.js' },
+            { src: 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/plugin/notes/notes.min.js', async: true },
+            { src: 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/plugin/highlight/highlight.min.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+            { src: '/reveal.js-plugins/chalkboard/chalkboard.js' },
+            { src: 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/plugin/math/math.min.js', async: true }
+        ],
+		keyboard: {
+			67: function() { RevealChalkboard.toggleNotesCanvas() },	// toggle notes canvas when 'c' is pressed
+			66: function() { RevealChalkboard.toggleChalkboard() },	// toggle chalkboard when 'b' is pressed
+			46: function() { RevealChalkboard.clear() },	// clear chalkboard when 'DEL' is pressed
+			 8: function() { RevealChalkboard.reset() },	// reset chalkboard data on current slide when 'BACKSPACE' is pressed
+			68: function() { RevealChalkboard.download() },	// downlad recorded chalkboard drawing when 'd' is pressed
+		},
+        center: false,
+        transition: 'none',
+        backgroundTransition: 'none',
+        showNotes: true,
+        progress: false,
+	slideNumber: true,
+
+    });
+</script>
+  </body>
+</html>
+

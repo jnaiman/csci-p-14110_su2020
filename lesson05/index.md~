@@ -1,0 +1,22 @@
+---
+layout: lesson
+visible: false
+---
+
+# Lesson 5 - Other Python Solvers: Choose your own adventure
+
+## Rebound
+
+[Rebound](https://rebound.readthedocs.io/en/latest/index.html) has both C and Python implementations to solve N-body equations with a variety of solvers.  There are other examples that include comments on the [Rebound examples page](https://rebound.readthedocs.io/en/latest/examples.html) if you find something of interest to explore there (make sure you use only the Python ones).
+
+* The [Rebound Solar System Project](rebound_solar_system.html): uses the ```Rebound``` Python package to calculate up-to-date orbits of our own solar system.  Extension question deals with adding more planets.  
+
+* The [Rebound Galaxies Project](rebound_galaxies.html): uses ```Rebound``` to integrate the motion of the galaxies presented in [Lesson 4](.../lesson04/index.html).  Extensions include generating your own initial conditions with [pyICs](http://jakobherpich.github.io/pyICs/).
+
+## SciPy
+
+[SciPy](https://www.scipy.org/) is a package that does all kinds of neat scientific calculation stuffs.  Check out [this example](https://www.marksmath.org/classes/Spring2018NumericalAnalysis/code/nBody.html) of how to use it to make your own 2D N-body integrator.  How would you extend this to 3D?
+
+## Others
+
+There are many [GitHub repos for N-body Solvers in Python and other languages](https://github.com/topics/nbody) that you may want to check out.

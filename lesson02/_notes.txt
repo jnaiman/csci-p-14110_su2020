@@ -1,0 +1,10 @@
+- see if students get emails from Harvard at all
+- start with slack
+- HW coding poll
+- go over what we learned about coding
+   * calculator
+   * simple variables
+   * for loops
+   * if-then
+   * plotting
+- start with part 1 lecture

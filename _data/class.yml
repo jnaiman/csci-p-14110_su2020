@@ -1,0 +1,25 @@
+instructor: 
+  name: Jill P. Naiman
+  email: jnaiman@illinois.edu
+  office: Science Center Library/Annenberg Dinning Hall
+  office_hours: ~3pm to ~4:30pm/4:30pm - 5pm(ish)
+tas:
+  -
+    name: Adrianna Perez
+    email: adrianna.perez@cfa.harvard.edu
+    office: Slack Channel
+    office_hours: Slack Channel
+course:
+  name: Intro to Scientific Computing and Data Viz
+  number: CSCI P-14100
+  semester: Summer 2019
+  location: Campus
+  time: M/T/W/Th/F, 12-3pm
+  credit_hours: NA
+urls:
+  -
+    name: Canvas Page
+    url: https://canvas.harvard.edu/courses/57025
+  -
+    name: Slack
+    url: https://cscip14110sum-arr8217.slack.com

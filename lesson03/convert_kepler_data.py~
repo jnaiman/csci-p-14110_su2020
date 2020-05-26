@@ -1,0 +1,66 @@
+import numpy as np
+
+# unit conversions
+MassOfSun = 2e33 # g
+MassOfJupiter = 1.898e30 # g
+AUinCM = 1.496e13 # cm
+kmincm = 1e5 # cm/km
+G = 6.674e-8 # gravitational constant in cm^3 g^-1 s^-2
+
+#---------------------------------------------------
+
+
+star_mass = np.mean(planet_data['sMass'])#*MassOfSun # say star's mass = average of all measurements
+planet_masses = planet_data['pMass']#*MassOfJupiter
+
+# now, do some conversions to get "initial" radii and velocities
+# lets assume ~circular orbits (since eccentricities aren't known too well)... then
+planet_initial_position = np.zeros([len(planet_masses),3]) # AU
+planet_initial_velocity = np.zeros([len(planet_masses),3])
+
+# SOLUTION #1:
+# to calculate initial positions and velocities we are assuming that
+# each orbit is approximately elliptical and that the total mass of the 
+# system ~ the mass of the star
+for i in range(0,len(planet_masses)):
+    planet_initial_position[i,:] = [-planet_data['a'][i]*(1.0 - planet_data['ecc'][i]), 0., 0.] # in AU
+    planet_initial_velocity[i,:] = [0.0, -np.sqrt( G*star_mass*MassOfSun*(1.0-planet_data['ecc'][i])/(planet_data['a'][i]*AUinCM) )/kmincm, 0.]
+
+
+# SOLUTION #2: A MORE COMPLICATED ALTERNATIVE SOLUTION:
+# now, we can estimate these orbits as almost circular (since they don't really know much about the ellipticity)
+#  this allows us to get the "phase" offsets of the systems from their time of first transit
+# say "base" is first planet, offset all other planets from there
+planet_initial_position[0,:] = [-planet_data['a'][0]*(1.0 - planet_data['ecc'][0]), 0., 0.] # in AU
+planet_initial_velocity[0,:] = [0.0, -np.sqrt( G*star_mass*MassOfSun*(1.0-planet_data['ecc'][0])/(planet_data['a'][0]*AUinCM) )/kmincm, 0.]
+for i in range(1, len(planet_masses)):
+    dt = np.abs(planet_data['tTime'][i] - planet_data['tTime'][0])
+    # what fraction of the orbital time is this?
+    fdt = dt/planet_data['Porb'][i]
+    theta = 360.0*fdt
+    #print(fdt, theta)
+    # now assume the orbit is r(theta) like for analytical, and that its circular enough that v ~ const
+    r = planet_data['a'][i]*(1.0 - planet_data['ecc'][i])
+    planet_initial_position[i,:] = [r*np.cos(theta * np.pi/180.0), r*np.sin(theta * np.pi/180.0), 0.0]
+    # here we use v~const and rotate the initial velocity vector to be tangent to planet_initial_position
+    vx = -r*np.sin(theta * np.pi/180.0)
+    vy = r*np.cos(theta * np.pi/180.0)
+    vmag = np.sqrt( G*star_mass*MassOfSun*(1.0-planet_data['ecc'][i])/(planet_data['a'][i]*AUinCM) )/kmincm
+    # renormalize to velocity vector's magnitude
+    planet_initial_velocity[i,:] = [vx/np.sqrt(vx*vx+vy*vy)*vmag, vy/np.sqrt(vx*vx+vy*vy)*vmag, 0.0]
+    
+
+# now, lets add on our defined planets
+planet_masses = planet_masses.tolist()
+planet_initial_position = planet_initial_position.tolist()
+planet_initial_velocity = planet_initial_velocity.tolist()
+for i in range(0,len(my_planet_masses)):
+    planet_masses.append(my_planet_masses[i])
+    planet_initial_position.append(my_planet_initial_position[i,:])
+    planet_initial_velocity.append(my_planet_initial_velocity[i,:])
+    
+planet_masses = np.array(planet_masses)
+planet_initial_position = np.array(planet_initial_position)
+planet_initial_velocity = np.array(planet_initial_velocity)
+
+

@@ -1,0 +1,312 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+<!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Rebound Galaxies | CSCI P-14110 Introduction to Programming, Computational Science, and Data Visualization</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="Rebound Galaxies" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="This is the course website CSCI P-14110" />
+<meta property="og:description" content="This is the course website CSCI P-14110" />
+<link rel="canonical" href="http://localhost:4008/csci-p-14110/lesson05/rebound_galaxies.html" />
+<meta property="og:url" content="http://localhost:4008/csci-p-14110/lesson05/rebound_galaxies.html" />
+<meta property="og:site_name" content="CSCI P-14110 Introduction to Programming, Computational Science, and Data Visualization" />
+<script type="application/ld+json">
+{"description":"This is the course website CSCI P-14110","headline":"Rebound Galaxies","@type":"WebPage","url":"http://localhost:4008/csci-p-14110/lesson05/rebound_galaxies.html","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link href='https://fonts.googleapis.com/css?family=Arvo:400,700,400italic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="/csci-p-14110/assets/css/style.css?v=HEAD">
+    <script src="/csci-p-14110/assets/js/scale.fix.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h2 class="header"><font color="white">CSCI P-14110 Introduction to Programming, Computational Science, and Data Visualization</font></h2>
+        <p class="header">This is the course website CSCI P-14110</p>
+
+        <ul>
+          
+          <!--<li><a class="buttons github" href="https://github.com/jnaiman/csci-p-14110_su2020">View On GitHub</a></li>-->
+        </ul>
+
+      </header>
+
+      <section>
+                <h1 id="rebound-galaxies">Rebound Galaxies</h1>
+
+<p><strong>Note: this example has less documentation and therefore might be a tougher problem.</strong></p>
+
+<p>First install with pip: add <code class="language-plaintext highlighter-rouge">!pip install rebound</code> in your jupyter notebook. Then you should be able to do <code class="language-plaintext highlighter-rouge">import rebound</code> in your notebook to import this package. See this website for more info about installing and testing rebound.</p>
+
+<p>Begin by going through the solar system example as a warm up: <a href="https://rebound.readthedocs.io/en/latest/ipython/Horizons.html">NASA Horizon interface</a> and the <a href="https://rebound.readthedocs.io/en/latest/ipython/Starman.html">Starman</a> example.  This pings the NASA Horizon telescope to get the current positions of all the planets.</p>
+
+<p>Once you have a feel for the <code class="language-plaintext highlighter-rouge">Rebound</code> solver, translate the galaxy initial conditions found on the <a href="../lesson04/index.html">Lesson 4 page</a> into units that <code class="language-plaintext highlighter-rouge">Rebound</code> expects.  For hints you can check out some <a href="http://www.astroblend.com/ba2016/code/day4/rebound_galaxyMerger_jill.py">old code right here</a>.</p>
+
+<p>EXTENSION: Download and use <a href="http://jakobherpich.github.io/pyICs/">PyICs</a> to generate your own initial galaxy particle positions.</p>
+
+
+        <h3>Materials</h3>
+        <ul>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+	
+	
+        <li>Lesson 5 - Kepler’s Planets, Orbits in 3D &amp; Other Python Solvers: Choose your own adventure: (<a href="/csci-p-14110/lesson05/">view</a>,
+          <a href="https://github.com/jnaiman/csci-p-14110_su2020/blob/gh-pages/lesson05/index.md">source</a>)</li>
+	
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+	
+        <li>Lecture 5, Part 1 - Kepler's Orbits: (<a href="/csci-p-14110/lesson05/lecture05_p1.html">view</a>,
+          <a href="https://github.com/jnaiman/csci-p-14110_su2020/blob/gh-pages/lesson05/lecture05_p1.md">source</a>, <a href="/csci-p-14110/lesson05/lecture05_p1.html?showNotes=false">present</a>)</li>
+	
+	
+        
+        
+        
+	
+        <li>Lecture 5, Part 2 - Multibody Motion in 3D: (<a href="/csci-p-14110/lesson05/lecture05_p2.html">view</a>,
+          <a href="https://github.com/jnaiman/csci-p-14110_su2020/blob/gh-pages/lesson05/lecture05_p2.md">source</a>, <a href="/csci-p-14110/lesson05/lecture05_p2.html?showNotes=false">present</a>)</li>
+	
+	
+        
+        
+        
+	
+        <li>Optional - Galaxy Multibody Motion in 3D: (<a href="/csci-p-14110/lesson05/lecture05_p3.html">view</a>,
+          <a href="https://github.com/jnaiman/csci-p-14110_su2020/blob/gh-pages/lesson05/lecture05_p3.md">source</a>, <a href="/csci-p-14110/lesson05/lecture05_p3.html?showNotes=false">present</a>)</li>
+	
+	
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+	
+	
+        <li>Rebound Solar System: (<a href="/csci-p-14110/lesson05/rebound_solar_system.html">view</a>,
+          <a href="https://github.com/jnaiman/csci-p-14110_su2020/blob/gh-pages/lesson05/rebound_solar_system.md">source</a>)</li>
+	
+        
+        
+        
+        
+        
+        
+<!--        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <li>PDF Part1_programming_readWriteData_keplersData_lesson05: 
+         (<a href="/csci-p-14110/lesson05/Part1_programming_readWriteData_keplersData_lesson05.pdf">view</a>
+        </li>
+        
+        
+        
+        <li>PDF Part2_planetsIn3D_lesson05: 
+         (<a href="/csci-p-14110/lesson05/Part2_planetsIn3D_lesson05.pdf">view</a>
+        </li>
+        
+        
+        
+        <li>PDF hutspaper: 
+         (<a href="/csci-p-14110/lesson05/hutspaper.pdf">view</a>
+        </li>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        -->
+	
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <li>Notebook Optional_animations_lesson05: 
+         (<a href="../nbv.html?notebook_name=%2Fcsci-p-14110%2Flesson05%2FOptional_animations_lesson05.ipynb">view</a>,
+         <a href="/csci-p-14110/lesson05/Optional_animations_lesson05.ipynb">download</a>)</li>
+        
+        
+        
+        <li>Notebook Optional_galaxySimulations_3d_lesson05: 
+         (<a href="../nbv.html?notebook_name=%2Fcsci-p-14110%2Flesson05%2FOptional_galaxySimulations_3d_lesson05.ipynb">view</a>,
+         <a href="/csci-p-14110/lesson05/Optional_galaxySimulations_3d_lesson05.ipynb">download</a>)</li>
+        
+        
+        
+        <li>Notebook Part1_programming_readWriteData_keplersData_lesson05: 
+         (<a href="../nbv.html?notebook_name=%2Fcsci-p-14110%2Flesson05%2FPart1_programming_readWriteData_keplersData_lesson05.ipynb">view</a>,
+         <a href="/csci-p-14110/lesson05/Part1_programming_readWriteData_keplersData_lesson05.ipynb">download</a>)</li>
+        
+        
+        
+        <li>Notebook Part2_planetsIn3D_lesson05: 
+         (<a href="../nbv.html?notebook_name=%2Fcsci-p-14110%2Flesson05%2FPart2_planetsIn3D_lesson05.ipynb">view</a>,
+         <a href="/csci-p-14110/lesson05/Part2_planetsIn3D_lesson05.ipynb">download</a>)</li>
+        
+        
+        
+        <li>Notebook Untitled: 
+         (<a href="../nbv.html?notebook_name=%2Fcsci-p-14110%2Flesson05%2FUntitled.ipynb">view</a>,
+         <a href="/csci-p-14110/lesson05/Untitled.ipynb">download</a>)</li>
+        
+        
+        
+        <li>Notebook inClass_lesson05: 
+         (<a href="../nbv.html?notebook_name=%2Fcsci-p-14110%2Flesson05%2FinClass_lesson05.ipynb">view</a>,
+         <a href="/csci-p-14110/lesson05/inClass_lesson05.ipynb">download</a>)</li>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        </ul>
+
+      </section>
+
+      <footer>
+        <p><small>Hosted on <a href="https://pages.github.com">GitHub Pages</a> using the Dinky theme</small></p>
+      </footer>
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+    
+  </body>
+</html>

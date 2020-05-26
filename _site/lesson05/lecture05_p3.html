@@ -1,0 +1,250 @@
+<!doctype html>
+<html>
+  <head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+<title>Optional - Galaxy Multibody Motion in 3D</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/css/reveal.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/css/theme/white.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+<!-- Theme used for syntax highlighting of code -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+<link href="https://fonts.googleapis.com/css?family=Questrial" rel="stylesheet">
+
+<!-- Printing and PDF exports -->
+<script>
+    var link = document.createElement( 'link' );
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match( /print-pdf/gi ) ?  '/revealjs/css/print/pdf.css' : '/revealjs/css/print/paper.css';
+    document.getElementsByTagName( 'head' )[0].appendChild( link );
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/lib/js/head.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/js/reveal.min.js"></script>
+
+
+<style type="text/css">
+.reveal section.present {
+  text-align: left;
+}
+.centered {
+  text-align: center;
+}
+.reveal {
+  font-size: 30px;
+  font-family: 'Questrial', sans-serif;
+}
+.reveal section img {
+  box-shadow: none;
+  border: 0px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.reveal bigtext {
+  font-size: 800%;
+}
+
+.reveal h1, .reveal h2, .reveal h3 {
+  text-transform: none;
+}
+
+.reveal .titleslide h1 {
+  text-align: center;
+}
+.reveal .titleslide h2 {
+  text-align: right;
+}
+
+.vertical_center section {
+  vertical-align: middle;
+}
+
+.left_abs {
+  left:0%;
+  text-align: left;
+  float: left;
+  width:50%;
+  z-index:-10;
+}
+
+.left {
+  left:-8.33%;
+  text-align: left;
+  float: left;
+  width:50%;
+  z-index:-10;
+}
+
+.right {
+  left:31.25%;
+  top: 75px;
+  float: right;
+  text-align: right;
+  z-index:-10;
+  width:50%;
+}
+
+.reveal table td {
+  text-align: left;
+  padding: 0.2em 0.5em 0.2em 0.5em;
+  border: solid; 
+}
+
+.reveal table tbody tr:last-child th,
+.reveal table tbody tr:last-child td {
+  border-bottom: solid; }
+
+.reveal .table-hl {
+  background: #aaa;
+}
+
+
+
+</style>
+  </head>
+
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section data-markdown
+           data-separator="^\n---\n"
+           data-separator-vertical="^\n----\n"
+           data-separator-notes="notes?:"
+           >
+          <script type="text/template">
+## Three dimensional simulations
+
+Options:
+* add 3D component to planets
+* galaxy simulations
+
+notes: so, we will have a few options now - you can stick with planetary systems, if that is your jam, and start to move your simulations into 3d
+
+we'll talk about other solvers for systems like Rebound that will do the solar system for us, but for now you can start adding these things *by hand*
+
+---
+
+## Three dimensional simulations - Galaxies
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/NGC_4414_%28NASA-med%29.jpg" width="800" />
+
+notes: another natural type of 3D object is a galaxy
+
+seen here is a "spiral" galaxy which is actually a relatively flat object - sort of like a disk in space
+
+---
+
+## Three dimensional simulations - Galaxies
+
+<img src="http://en.es-static.us/upl/2019/01/galaxy-merger-mice-e1547088077596.jpg" width="800" />
+
+notes: however, an important part of galaxy evolution are *galaxy mergers* which are very 3-dimensional events
+
+---
+
+## Three dimensional simulations - Galaxies
+
+<img src="http://www2.iap.fr/users/volonter/m2.jpg" width="800" />
+
+notes: its *these* sorts of things your every day computational physicist wants to be able to model
+
+we won't get the types of galaxies we see today in the universe without them!
+
+---
+
+## Three dimensional simulations - Galaxies
+
+<img src="https://milkyway.cs.rpi.edu/download/images/MW_cartoon.png" width="700" />
+
+notes: galaxies are actually make up of a few different components - here the "bulge" which sits in the middle is greatly aggerated, as is the size of the sun
+
+this is a cartoon of our own Milky Way galaxy and you can see some features - there are some "dwarf galaxies" around our Milky way, and there is a "stream" of material that has been stripped from one called Saggatarius Dwarf is it has collided with our Milky Way and is likely in the process of merging with our Milky Way
+
+the "SDSS Data Wedge" just refers to the observational window of a particular mission that got to look at one of these "streams"
+
+outside this there is a dark matter halo
+
+---
+
+## Three dimensional simulations - Galaxies
+
+<img src="https://mcdonaldobservatory.org/sites/default/files/images/news/gallery/PIE-CHART.jpg" width="800" />
+
+notes: this dark matter stuff is actually the dominate form of matter in the Universe
+
+the stuff that makes up you and I comes from what we call "baryons" and is only roughly 4% of the Universe
+
+There is also this stuff called "dark energy" that we are going to ignore for now, but its even more mysterious than dark matter!
+
+---
+
+## Three dimensional simulations - Galaxies
+
+<img src="https://mk0astronomynow9oh6g.kinstacdn.com/wp-content/uploads/2015/11/Triangulum_II_620x400.jpg" width="600"/>
+
+Dark matter is *dark* in the sense that we can't see it with light rays, but we can only *deduce* its existance from its gravitational effects on galaxies.
+
+notes: dark matter gets its name because we cannot see it!
+
+if we did it would look like the dominant form of matter in a galaxy as you can see from this image
+
+we know it exists because of how it changes the rotation of stars in our galaxy - so we have to be sure to include it in our simulations!
+
+---
+
+## Three dimensional simulations - Galaxies
+
+<iframe width="800" height="450" src="https://www.youtube.com/embed/RH7S_ajUniM?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+notes: in reality, we need to include extra things like gas with which stars form, feedback from black holes, supernovae explosions, etc for a realistic simulation of a galaxy
+
+here is an example from the group I've worked with called IllustrisTNG that modeled a big swath of the Universe to make a whole bunch of galaxies
+
+*point out stuffs*
+
+---
+
+# Optional: Three dimensional simulations Galaxy in Python
+
+notes: I'll go through a notebook that uses our Hermite solver to do some stuff, but I'll leave it up to the reader to actually change it to do the actual simulation.
+
+          </script>
+        </section>
+      </div>
+    </div>
+<script>
+    // More info about config & dependencies:
+    // - https://github.com/hakimel/reveal.js#configuration
+    // - https://github.com/hakimel/reveal.js#dependencies
+    Reveal.initialize({
+        dependencies: [
+            { src: 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/plugin/markdown/marked.js' },
+            { src: 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/plugin/markdown/markdown.min.js' },
+            { src: 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/plugin/notes/notes.min.js', async: true },
+            { src: 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/plugin/highlight/highlight.min.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+            { src: '/reveal.js-plugins/chalkboard/chalkboard.js' },
+            { src: 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/plugin/math/math.min.js', async: true }
+        ],
+		keyboard: {
+			67: function() { RevealChalkboard.toggleNotesCanvas() },	// toggle notes canvas when 'c' is pressed
+			66: function() { RevealChalkboard.toggleChalkboard() },	// toggle chalkboard when 'b' is pressed
+			46: function() { RevealChalkboard.clear() },	// clear chalkboard when 'DEL' is pressed
+			 8: function() { RevealChalkboard.reset() },	// reset chalkboard data on current slide when 'BACKSPACE' is pressed
+			68: function() { RevealChalkboard.download() },	// downlad recorded chalkboard drawing when 'd' is pressed
+		},
+        center: false,
+        transition: 'none',
+        backgroundTransition: 'none',
+        showNotes: true,
+        progress: false,
+	slideNumber: true,
+
+    });
+</script>
+  </body>
+</html>
+
