@@ -50,11 +50,12 @@ Movie of this process:
 
 Below are some extra resources to learn about the topics we discussed.  Some will be required for the HW and will be listed on the Canvas webpage, while others are left up to you!
 
-## Astronomy
 
-1. [Astronomy Crash Course - An Intro to Astronomy](https://www.youtube.com/watch?v=0rHUDWjR5gg&list=PL8dPuuaLjXtPAJr1ysd5yGIyiSFuh0mIL&index=2&t=2s) - what is this whole "Astronomy" thing anyway?
-1. [Astronomy Crash Course - The Sun](https://www.youtube.com/watch?v=b22HKFMIfWo&list=PL8dPuuaLjXtPAJr1ysd5yGIyiSFuh0mIL&index=10) gives a good sense of the size of things.
-1. [Astronomy Crash Course - Distances](https://www.youtube.com/watch?v=CWMh61yutjU&list=PL8dPuuaLjXtPAJr1ysd5yGIyiSFuh0mIL&index=25) - ever want to know how we can actually measure distances to far away stuff?  It's tougher than you think!
-1. [Astronomy Crash Course - Intro to the Solar System](https://www.youtube.com/watch?v=TKM0P3XlMNA&list=PL8dPuuaLjXtPAJr1ysd5yGIyiSFuh0mIL&index=10&t=0s) gives an intro to our local planetary neighbors and our nearest star.
+<!-- ## Astronomy -->
+
+<!-- 1. [Astronomy Crash Course - An Intro to Astronomy](https://www.youtube.com/watch?v=0rHUDWjR5gg&list=PL8dPuuaLjXtPAJr1ysd5yGIyiSFuh0mIL&index=2&t=2s) - what is this whole "Astronomy" thing anyway? -->
+<!-- 1. [Astronomy Crash Course - The Sun](https://www.youtube.com/watch?v=b22HKFMIfWo&list=PL8dPuuaLjXtPAJr1ysd5yGIyiSFuh0mIL&index=10) gives a good sense of the size of things. -->
+<!-- 1. [Astronomy Crash Course - Distances](https://www.youtube.com/watch?v=CWMh61yutjU&list=PL8dPuuaLjXtPAJr1ysd5yGIyiSFuh0mIL&index=25) - ever want to know how we can actually measure distances to far away stuff?  It's tougher than you think! -->
+<!-- 1. [Astronomy Crash Course - Intro to the Solar System](https://www.youtube.com/watch?v=TKM0P3XlMNA&list=PL8dPuuaLjXtPAJr1ysd5yGIyiSFuh0mIL&index=10&t=0s) gives an intro to our local planetary neighbors and our nearest star. -->
 
 
