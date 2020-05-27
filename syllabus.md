@@ -19,7 +19,7 @@ A good working knowledge of geometry, trigonometry, and algebra. Students must b
 Days will be split roughly into two parts, with the first spent on programming or data visualization concepts and the second spent on hands-on coding with these concepts.  	
 
 
-Below is an approximate outline of the course and required and *optional* reading for each week.
+Below is an approximate outline of the course and required and *optional* reading for each lesson.  It is recommended that you do the reading the night before the day its listed with.
 This course is always under development and  the
 course outline below is subject to some flexibility; students will be encouraged
 to provide feedback on the topics covered, particularly toward the end.  Topics
@@ -27,7 +27,7 @@ that are of particular interest will be emphasized.
 
 **Required texts:**
 
- * [Python for Everybody](https://www.py4e.com/) is a free, online book for Python fundamentals.
+ * [Python for Everybody](https://www.py4e.com/book.php) is a free, online book for Python fundamentals.  The HTML version [is linked right here](https://www.py4e.com/html3/).
  * There is a free online book, <a href="https://serialmentor.com/dataviz/">Fundamentals of Data Visualization by Claus O. Wilke</a> that provies a lot of nice examples and serves as an intro to the *optional* Tamara Munzner book listed below.  It has an <a href="https://serialmentor.com/dataviz/bibliography.html">annotated bibliography at the end</a> that gives a few references for books in data viz that include programming. It is built from the linked <a href="https://github.com/clauswilke/dataviz">GitHub repo</a>.  Note that this book is focused on static (not interactive) visualizations.
 
 
@@ -43,7 +43,7 @@ Acronyms for books:
 
 | Day   | Topics  | Reading |
 |-------|---------|------|
-| Day 1: June 29 | Intro to class, Intro to programming | Py4E: Ch. 1, 2 & 8
+| Day 1: June 29 | Intro to class, Intro to programming | Py4E: Ch. 1, 2, 6 & 8 <br> Note: some of this reading covers conditionals (Ch. 3) & iterations (Ch. 5) which are covered tomorrow in class.
 | Day 2: June 30 | Programming syntax, flow control | Py4E: Ch. 3 & 5
 | Day 3: July 1  | Data storage & operations, functions | Py4E: Ch. 4 & 7
 | Day 4: July 2 | What is data viz? | TBD
