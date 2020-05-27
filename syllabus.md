@@ -18,13 +18,34 @@ A good working knowledge of geometry, trigonometry, and algebra. Students must b
 ## Course Schedule
 Days will be split roughly into two parts, with the first spent on programming or data visualization concepts and the second spent on hands-on coding with these concepts.  	
 
-Below is a draft schedule - subject to slight changes depending on class pace/interests.
+
+Below is an approximate outline of the course and required and *optional* reading for each week.
+This course is always under development and  the
+course outline below is subject to some flexibility; students will be encouraged
+to provide feedback on the topics covered, particularly toward the end.  Topics
+that are of particular interest will be emphasized.
+
+**Required texts:**
+
+ * [Python for Everybody](https://www.py4e.com/) is a free, online book for Python fundamentals.
+ * There is a free online book, <a href="https://serialmentor.com/dataviz/">Fundamentals of Data Visualization by Claus O. Wilke</a> that provies a lot of nice examples and serves as an intro to the *optional* Tamara Munzner book listed below.  It has an <a href="https://serialmentor.com/dataviz/bibliography.html">annotated bibliography at the end</a> that gives a few references for books in data viz that include programming. It is built from the linked <a href="https://github.com/clauswilke/dataviz">GitHub repo</a>.  Note that this book is focused on static (not interactive) visualizations.
+
+
+*Optional texts:*
+ * <a href="https://www.amazon.com/Visualization-Analysis-Design-AK-Peters/dp/1466508914/ref=sr_1_2?crid=1WC409BVX1489&keywords=visualization+analysis+and+design&qid=1580082878&sprefix=visualization%2Caps%2C158&sr=8-2">Visualization Analysis & Design, Tamara Munzner</a>
+ * Edward Tufte wrote a series of visualization books that are often thought of as foundational to the field.  These include <a href="https://www.amazon.com/Visual-Display-Quantitative-Information/dp/0961392142/ref=sr_1_1?keywords=edward+tufte+books&qid=1580082986&sr=8-1">The Visual Display of Quantitative Information</a>, <a href="https://www.amazon.com/Beautiful-Evidence-Edward-R-Tufte/dp/0961392177/ref=sr_1_2?keywords=edward+tufte+books&qid=1580082986&sr=8-2">Beautiful Evidence</a>, <a href="https://www.amazon.com/Envisioning-Information-Edward-R-Tufte/dp/0961392118/ref=sr_1_3?keywords=edward+tufte+books&qid=1580082986&sr=8-3">Envisioning Information</a>, and <a href="https://www.amazon.com/Visual-Explanations-Quantities-Evidence-Narrative/dp/0961392126/ref=sr_1_4?keywords=edward+tufte+books&qid=1580082986&sr=8-4">Visual Explanations: Images and Quantities, Evidence and Narrative<a>
+ * Additional references will be added as needed.
+
+Acronyms for books:
+ * Py4E: Python for Everybody
+ * VAD: Visualization Analysis & Design
+ * FDA: Fundamentals of Data Visualization
 
 | Day   | Topics  | Reading |
 |-------|---------|------|
-| Day 1: June 29 | Intro to class, Intro to programming | TBD
-| Day 2: June 30 | Programming syntax, flow control | TBD
-| Day 3: July 1  | Data storage & operations, functions | TBD
+| Day 1: June 29 | Intro to class, Intro to programming | Py4E: Ch. 1, 2 & 8
+| Day 2: June 30 | Programming syntax, flow control | Py4E: Ch. 3 & 5
+| Day 3: July 1  | Data storage & operations, functions | Py4E: Ch. 4 & 7
 | Day 4: July 2 | What is data viz? | TBD
 | Day 5: Holiday! | NA | (TBD) Assigned over weekend
 | Day 6: July 6  | Intro to colors & colormaps | TBD
