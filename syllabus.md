@@ -44,7 +44,7 @@ Acronyms for books:
 | Day   | Topics  | Reading |
 |-------|---------|------|
 | Day 1: June 29 | Intro to class, Intro to programming | 1. Py4E: Ch. 1, 2, 6 & 8 <br> Note: some of this reading covers conditionals (Ch. 3) & iterations (Ch. 5) which are covered tomorrow in class. <br> 2. Optional: [Intro to Jupyter Notebook Video](https://www.youtube.com/watch?v=3C9E2yPBw7s)
-| Day 2: June 30 | Programming syntax, flow control | Py4E: Ch. 3 & 5
+| Day 2: June 30 | Programming syntax, flow control | Py4E: Ch. 3 & 5 (you can just skim the Try & Except section)
 | Day 3: July 1  | Data storage & operations, functions | Py4E: Ch. 4 & 7
 | Day 4: July 2 | What is data viz? | TBD
 | Day 5: Holiday! | NA | (TBD) Assigned over weekend

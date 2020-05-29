@@ -24,3 +24,8 @@ Some handy references you might appreciate:
  * [Jupyter Cheat Sheet](https://www.dataquest.io/blog/jupyter-notebook-tips-tricks-shortcuts/)
  * [Windows-to-Mac Commands Conversion Cheat Sheet](https://www.lemoda.net/windows/windows2unix/windows2unix.html)
 
+
+## Extra programming resources
+
+ * [Intro to Programming by E.Wickes](https://github.com/elliewix/IS-452-Spring2020) which is much more text-data based
+
