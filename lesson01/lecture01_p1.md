@@ -10,6 +10,7 @@ visible_n: true
 <div style="height: 6.0em;"></div>
 ## Jill P. Naiman
 ## Summer 2020
+## Lecture 1
 
 ---
 <!-- .slide: class="vertical_center" -->

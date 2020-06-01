@@ -5,9 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
 
 <!-- Begin Jekyll SEO tag v2.6.1 -->
-<title>Lesson 2 - More on gravity and the two body problem | CSCI P-14110 Introduction to Programming, Computational Science, and Data Visualization</title>
+<title>Lesson 2 - More intro to programming, flow control | CSCI P-14110 Introduction to Programming, Computational Science, and Data Visualization</title>
 <meta name="generator" content="Jekyll v3.8.5" />
-<meta property="og:title" content="Lesson 2 - More on gravity and the two body problem" />
+<meta property="og:title" content="Lesson 2 - More intro to programming, flow control" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="This is the course website CSCI P-14110" />
 <meta property="og:description" content="This is the course website CSCI P-14110" />
@@ -15,7 +15,7 @@
 <meta property="og:url" content="http://localhost:4008/csci-p-14110_su2020/lesson02/" />
 <meta property="og:site_name" content="CSCI P-14110 Introduction to Programming, Computational Science, and Data Visualization" />
 <script type="application/ld+json">
-{"description":"This is the course website CSCI P-14110","headline":"Lesson 2 - More on gravity and the two body problem","@type":"WebPage","url":"http://localhost:4008/csci-p-14110_su2020/lesson02/","@context":"https://schema.org"}</script>
+{"description":"This is the course website CSCI P-14110","headline":"Lesson 2 - More intro to programming, flow control","@type":"WebPage","url":"http://localhost:4008/csci-p-14110_su2020/lesson02/","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
     <link href='https://fonts.googleapis.com/css?family=Arvo:400,700,400italic' rel='stylesheet' type='text/css'>
@@ -40,62 +40,14 @@
       </header>
 
       <section>
-                <h1 id="lesson-2---more-on-gravity-and-the-two-body-problem">Lesson 2 - More on gravity and the two body problem</h1>
-
-<h2 id="downloads">Downloads</h2>
-
-<ul>
-  <li><a href="/csci-p-14110_su2020/lesson02/downloads/integrators.pdf">Integrators Article</a></li>
-  <li><a href="/csci-p-14110_su2020/lesson02/hermite_library.py">Hermite Library - hermite_library.py</a></li>
-</ul>
-
-<h2 id="links">Links</h2>
-
-<ul>
-  <li><a href="http://www.stefanom.org/spc/">Super Planet Crash</a></li>
-  <li><a href="http://save-point.herokuapp.com/dashboard/users.php">Bonus: Orbits Game</a></li>
-  <li><a href="http://www.manybody.org/modest/heggie_split.pdf">More on N-body Units</a></li>
-</ul>
+                <h1 id="lesson-2---more-intro-to-programming-flow-control">Lesson 2 - More intro to programming, flow control</h1>
 
 <h2 id="resources">Resources</h2>
 
-<p>Below are some extra resources to learn about the topics we discussed.  Some will be required for the HW and will be listed on the Canvas webpage, while others are left up to you!</p>
-
-<h2 id="crash-course-in-physics-linear-and-circular-motion">Crash Course in Physics: Linear and Circular Motion</h2>
+<h3 id="reading">Reading</h3>
 
 <ol>
-  <li><a href="https://www.youtube.com/watch?v=ZM8ECpBuQYE">Physics Crash Course - intro to linear motion</a></li>
-  <li><a href="https://www.khanacademy.org/science/ap-physics-1/ap-centripetal-force-and-gravitation">Intro to Circular Motion and Gravitation</a>
-    <ul>
-      <li><a href="https://www.khanacademy.org/science/ap-physics-1/ap-centripetal-force-and-gravitation/introduction-to-uniform-circular-motion-ap/v/angular-motion-variables">Subsection: Angular Motion Variables</a></li>
-    </ul>
-  </li>
-</ol>
-
-<h2 id="crash-course-in-physics-gravity-and-circular-motion">Crash Course in Physics: Gravity and Circular Motion</h2>
-
-<ol>
-  <li><a href="https://www.youtube.com/watch?v=kKKM8Y-u7ds">Physics Crash Course - Intro to Newton’s Law’s</a></li>
-  <li><a href="https://www.youtube.com/watch?v=7gf6YpdvtE0&amp;list=PL8dPuuaLjXtN0ge7yDk_UA0ldZJdhwkoV&amp;index=10&amp;t=0s">Physics Crash Course - Intro to Gravitation</a></li>
-  <li><a href="https://www.khanacademy.org/science/ap-physics-1/ap-centripetal-force-and-gravitation">Intro to Circular Motion and Gravitation</a>
-    <ul>
-      <li><a href="https://www.khanacademy.org/science/ap-physics-1/ap-centripetal-force-and-gravitation/newtons-law-of-gravitation-ap/v/introduction-to-gravity">Subsection: Newton’s Laws of Gravitation</a></li>
-    </ul>
-  </li>
-  <li><a href="https://www.khanacademy.org/science/physics/centripetal-force-and-gravitation">Another take on Circular Motion and Gravitation</a></li>
-  <li><a href="https://www.khanacademy.org/science/ap-physics-1/ap-forces-newtons-laws/newtons-first-law-mass-and-inertia-ap/v/newton-s-1st-law-of-motion">Newton’s First Law</a></li>
-</ol>
-
-<h2 id="ellipses-conic-sections-and-keplers-laws">Ellipses, Conic sections and Kepler’s Laws</h2>
-
-<ol>
-  <li><a href="https://courses.lumenlearning.com/waymakercollegealgebra/chapter/equations-of-ellipses/">Reading from Lumen Learning</a></li>
-  <li><a href="https://www.khanacademy.org/math/precalculus/conics-precalc">Intro to Conic sections from Khan Academy</a>
-    <ul>
-      <li><a href="https://www.khanacademy.org/math/precalculus/conics-precalc/center-and-radii-of-an-ellipse/v/conic-sections-intro-to-ellipses">Subsection: Khan Academy Intro to Ellipses</a></li>
-    </ul>
-  </li>
-  <li><a href="http://hyperphysics.phy-astr.gsu.edu/hbase/kepler.html">An intro to Kepler’s Laws</a> - note that some of the links contain calculus derivations.</li>
+  <li>Py4E: Ch. 3 &amp; 5 (you can just skim the Try &amp; Except section)</li>
 </ol>
 
 
@@ -131,24 +83,8 @@
         
         
 	
-        <li>Lecture 2, Part 1 - Linear and Circular Motion: (<a href="/csci-p-14110_su2020/lesson02/lecture02_p1.html">view</a>,
-          <a href="https://github.com/jnaiman/csci-p-14110_su2020/blob/gh-pages/lesson02/lecture02_p1.md">source</a>, <a href="/csci-p-14110_su2020/lesson02/lecture02_p1.html?showNotes=false">present</a>)</li>
-	
-	
-        
-        
-        
-	
-        <li>Lecture 2, Part 2 - Gravity and Circular Motion: (<a href="/csci-p-14110_su2020/lesson02/lecture02_p2.html">view</a>,
-          <a href="https://github.com/jnaiman/csci-p-14110_su2020/blob/gh-pages/lesson02/lecture02_p2.md">source</a>, <a href="/csci-p-14110_su2020/lesson02/lecture02_p2.html?showNotes=false">present</a>)</li>
-	
-	
-        
-        
-        
-	
-        <li>Lecture 2, Part 3 - Kepler's Laws, Ellipses and Orbital Motion: (<a href="/csci-p-14110_su2020/lesson02/lecture02_p3.html">view</a>,
-          <a href="https://github.com/jnaiman/csci-p-14110_su2020/blob/gh-pages/lesson02/lecture02_p3.md">source</a>, <a href="/csci-p-14110_su2020/lesson02/lecture02_p3.html?showNotes=false">present</a>)</li>
+        <li>Lecture 1 - Intro: (<a href="/csci-p-14110_su2020/lesson02/lecture02.html">view</a>,
+          <a href="https://github.com/jnaiman/csci-p-14110_su2020/blob/gh-pages/lesson02/lecture02.md">source</a>, <a href="/csci-p-14110_su2020/lesson02/lecture02.html?showNotes=false">present</a>)</li>
 	
 	
         
@@ -227,36 +163,6 @@
         
         
         
-        
-        
-        
-        <li>Notebook Part1_circularMotion_eulers_notes_lesson01: 
-         (<a href="../nbv.html?notebook_name=%2Fcsci-p-14110_su2020%2Flesson02%2FPart1_circularMotion_eulers_notes_lesson01.ipynb">view</a>,
-         <a href="/csci-p-14110_su2020/lesson02/Part1_circularMotion_eulers_notes_lesson01.ipynb">download</a>)</li>
-        
-        
-        
-        <li>Notebook Part2_gravity_notes_lesson01: 
-         (<a href="../nbv.html?notebook_name=%2Fcsci-p-14110_su2020%2Flesson02%2FPart2_gravity_notes_lesson01.ipynb">view</a>,
-         <a href="/csci-p-14110_su2020/lesson02/Part2_gravity_notes_lesson01.ipynb">download</a>)</li>
-        
-        
-        
-        <li>Notebook Part3_ellipses_notes_lesson01: 
-         (<a href="../nbv.html?notebook_name=%2Fcsci-p-14110_su2020%2Flesson02%2FPart3_ellipses_notes_lesson01.ipynb">view</a>,
-         <a href="/csci-p-14110_su2020/lesson02/Part3_ellipses_notes_lesson01.ipynb">download</a>)</li>
-        
-        
-        
-        <li>Notebook inClass_lesson02: 
-         (<a href="../nbv.html?notebook_name=%2Fcsci-p-14110_su2020%2Flesson02%2FinClass_lesson02.ipynb">view</a>,
-         <a href="/csci-p-14110_su2020/lesson02/inClass_lesson02.ipynb">download</a>)</li>
-        
-        
-        
-        <li>Notebook inClass_quickPythonReview: 
-         (<a href="../nbv.html?notebook_name=%2Fcsci-p-14110_su2020%2Flesson02%2FinClass_quickPythonReview.ipynb">view</a>,
-         <a href="/csci-p-14110_su2020/lesson02/inClass_quickPythonReview.ipynb">download</a>)</li>
         
         
         
