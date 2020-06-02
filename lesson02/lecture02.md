@@ -139,14 +139,95 @@ We're going to tackle some stuff we'll put under the umbrella of "flow control" 
 
 Let's say I want to mix up what I have for breakfast.
 
-I could say: "On Monday, Tuesday, Wednesday, Thursday, and Friday I eat oatmeal.  Then on Saturday and Sunday, I have pancakes."
+---
 
-| Monday | Tuesday | Wednesday | Thursday |  Friday  | Saturday | Sunday |
+## Logical Statements - Conditional Statements 
+
+Let's say I want to mix up what I have for breakfast.
+
+<small>I could say: "On Monday, Tuesday, Wednesday, Thursday, and Friday I eat oatmeal.  Then on Saturday and Sunday, I have pancakes."</small>
+
+---
+
+## Logical Statements - Conditional Statements 
+
+Let's say I want to mix up what I have for breakfast.
+
+<small>I could say: "On Monday, Tuesday, Wednesday, Thursday, and Friday I eat oatmeal.  Then on Saturday and Sunday, I have pancakes."</small>
+
+| <large>Monday</large> | <large>Tuesday</large> | <large>Wednesday</large> | <large>Thursday</large> |  <large>Friday</large>  | <large>Saturday</large> | <large>Sunday</large> |
 |--------|---------|-----------|----------|--------|----------|--------|
 | <img src="https://www.wellplated.com/wp-content/uploads/2018/05/Steel-Cut-Oats-Recipe-600x716.jpg" width='65px'> | <img src="https://www.wellplated.com/wp-content/uploads/2018/05/Steel-Cut-Oats-Recipe-600x716.jpg" width='65px'> | <img src="https://www.wellplated.com/wp-content/uploads/2018/05/Steel-Cut-Oats-Recipe-600x716.jpg" width='65px'> | <img src="https://www.wellplated.com/wp-content/uploads/2018/05/Steel-Cut-Oats-Recipe-600x716.jpg" width='65px'> | <img src="https://www.wellplated.com/wp-content/uploads/2018/05/Steel-Cut-Oats-Recipe-600x716.jpg" width='65px'> | <img src="https://www.graceandgoodeats.com/wp-content/uploads/2015/01/best-ever-homemade-pancakes.jpg" width='65px'> | <img src="https://www.graceandgoodeats.com/wp-content/uploads/2015/01/best-ever-homemade-pancakes.jpg" width='65px'> |
 
-OR, I could say: "On weekdays I eat oatmeal and on weekends I eat pancakes."
+---
 
-| Weekdays | Weekends |
-|--------|--------|
-| <img src="https://www.wellplated.com/wp-content/uploads/2018/05/Steel-Cut-Oats-Recipe-600x716.jpg" width='65px'> | <img src="https://www.graceandgoodeats.com/wp-content/uploads/2015/01/best-ever-homemade-pancakes.jpg" width='65px'> |
+## Logical Statements - Conditional Statements 
+
+Let's say I want to mix up what I have for breakfast.
+
+<small>I could say: "On Monday, Tuesday, Wednesday, Thursday, and Friday I eat oatmeal.  Then on Saturday and Sunday, I have pancakes."</small>
+
+| <large>Monday</large> | <large>Tuesday</large> | <large>Wednesday</large> | <large>Thursday</large> |  <large>Friday</large>  | <large>Saturday</large> | <large>Sunday</large> |
+|--------|---------|-----------|----------|--------|----------|--------|
+| <img src="https://www.wellplated.com/wp-content/uploads/2018/05/Steel-Cut-Oats-Recipe-600x716.jpg" width='65px'> | <img src="https://www.wellplated.com/wp-content/uploads/2018/05/Steel-Cut-Oats-Recipe-600x716.jpg" width='65px'> | <img src="https://www.wellplated.com/wp-content/uploads/2018/05/Steel-Cut-Oats-Recipe-600x716.jpg" width='65px'> | <img src="https://www.wellplated.com/wp-content/uploads/2018/05/Steel-Cut-Oats-Recipe-600x716.jpg" width='65px'> | <img src="https://www.wellplated.com/wp-content/uploads/2018/05/Steel-Cut-Oats-Recipe-600x716.jpg" width='65px'> | <img src="https://www.graceandgoodeats.com/wp-content/uploads/2015/01/best-ever-homemade-pancakes.jpg" width='65px'> | <img src="https://www.graceandgoodeats.com/wp-content/uploads/2015/01/best-ever-homemade-pancakes.jpg" width='65px'> |
+
+<small>OR, I could say: "On weekdays I eat oatmeal and on weekends I eat pancakes."</small>
+
+<div class="left">
+
+ <table style="width:80%">
+  <tr>
+    <th>Weekday</th>
+    <th>Weekend</th>
+  </tr>
+  <tr>
+    <td> <img src="https://www.wellplated.com/wp-content/uploads/2018/05/Steel-Cut-Oats-Recipe-600x716.jpg" width='65px'></td>
+    <td><img src="https://www.graceandgoodeats.com/wp-content/uploads/2015/01/best-ever-homemade-pancakes.jpg" width='65px'></td>
+  </tr>
+
+ </table>
+
+</div>
+
+---
+
+## Logical Statements - Conditional Statements 
+
+Let's say I want to mix up what I have for breakfast.
+
+<small>I could say: "On Monday, Tuesday, Wednesday, Thursday, and Friday I eat oatmeal.  Then on Saturday and Sunday, I have pancakes."</small>
+
+| <large>Monday</large> | <large>Tuesday</large> | <large>Wednesday</large> | <large>Thursday</large> |  <large>Friday</large>  | <large>Saturday</large> | <large>Sunday</large> |
+|--------|---------|-----------|----------|--------|----------|--------|
+| <img src="https://www.wellplated.com/wp-content/uploads/2018/05/Steel-Cut-Oats-Recipe-600x716.jpg" width='65px'> | <img src="https://www.wellplated.com/wp-content/uploads/2018/05/Steel-Cut-Oats-Recipe-600x716.jpg" width='65px'> | <img src="https://www.wellplated.com/wp-content/uploads/2018/05/Steel-Cut-Oats-Recipe-600x716.jpg" width='65px'> | <img src="https://www.wellplated.com/wp-content/uploads/2018/05/Steel-Cut-Oats-Recipe-600x716.jpg" width='65px'> | <img src="https://www.wellplated.com/wp-content/uploads/2018/05/Steel-Cut-Oats-Recipe-600x716.jpg" width='65px'> | <img src="https://www.graceandgoodeats.com/wp-content/uploads/2015/01/best-ever-homemade-pancakes.jpg" width='65px'> | <img src="https://www.graceandgoodeats.com/wp-content/uploads/2015/01/best-ever-homemade-pancakes.jpg" width='65px'> |
+
+<small>OR, I could say: "On weekdays I eat oatmeal and on weekends I eat pancakes."</small>
+
+<div class="left">
+
+ <table color="red" style="width:80%">
+  <tr>
+    <th><font color="red">Weekday</font></th>
+    <th><font color="red">Weekend</font></th>
+  </tr>
+  <tr>
+    <td> <img src="https://www.wellplated.com/wp-content/uploads/2018/05/Steel-Cut-Oats-Recipe-600x716.jpg" width='65px'></td>
+    <td><img src="https://www.graceandgoodeats.com/wp-content/uploads/2015/01/best-ever-homemade-pancakes.jpg" width='65px'></td>
+  </tr>
+
+ </table>
+
+</div>
+
+<div class="right">
+<font color="red">Looking for the "type" of day and making a breakfast decision is like an `if-statement`!</font>
+</div>
+
+---
+
+# To Python for more on this!
+
+notes: 
+
+let's go back to python to get into a bit of this!
+
