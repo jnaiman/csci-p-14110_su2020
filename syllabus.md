@@ -44,7 +44,7 @@ Acronyms for books:
 | Day   | Topics  | Reading |
 |-------|---------|------|
 | Day 1: June 29 | Intro to class, Intro to programming | 1. Py4E: Ch. 1, 2, 6 & 8 <br> Note: some of this reading covers conditionals (Ch. 3) & iterations (Ch. 5) which are covered tomorrow in class. <br> 2. Optional: [Intro to Jupyter Notebook Video](https://www.youtube.com/watch?v=3C9E2yPBw7s) <br> 3. Optional: [Software Carpentry (SC) Variables lesson](http://swcarpentry.github.io/python-novice-gapminder/02-variables/index.html) and [SC's conversion lesson](http://swcarpentry.github.io/python-novice-gapminder/03-types-conversion/index.html)
-| Day 2: June 30 | Programming syntax, flow control | 1. Py4E: Ch. 3 & 5 (you can just skim the Try & Except section) <br> 2. Optional: [Loops Lecture, IS452](https://github.com/elliewix/IS-452-Spring2020/blob/master/Lectures/Week-02-ExpressionsAndLoops.ipynb) <br> 3. Optional: [SC's loops lesson](http://swcarpentry.github.io/python-novice-gapminder/12-for-loops/index.html)
+| Day 2: June 30 | Programming syntax, flow control | 1. Py4E: Ch. 3 & 5 (you can just skim the Try & Except section) <br> 2. Optional: [Loops Lecture, IS452](https://github.com/elliewix/IS-452-Spring2020/blob/master/Lectures/Week-02-ExpressionsAndLoops.ipynb) and [if-then Lecture, IS452](https://github.com/elliewix/IS-452-Spring2020/blob/master/Lectures/Week-07-BooleansPt1-if-else.ipynb) <br> 3. Optional: [SC's loops lesson](http://swcarpentry.github.io/python-novice-gapminder/12-for-loops/index.html)
 | Day 3: July 1  | Data storage & operations, functions | Py4E: Ch. 4 & 7
 | Day 4: July 2 | What is data viz? | TBD
 | Day 5: Holiday! | NA | (TBD) Assigned over weekend
