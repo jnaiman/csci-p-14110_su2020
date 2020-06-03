@@ -13,6 +13,7 @@ Today we will cover how we can get data into Python, do stuff with it, and make 
 
 1. Py4E: Ch. 4 & 7 
 1. [SC's Data with Pandas lesson](http://swcarpentry.github.io/python-novice-gapminder/07-reading-tabular/index.html)
+1. *Optional:* [IS452's notebook on functions](https://github.com/elliewix/IS-452-Spring2020/blob/master/Lectures/Week-05-Functions.ipynb)
 
 ### Extra Code examples
 
