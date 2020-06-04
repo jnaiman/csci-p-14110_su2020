@@ -9,6 +9,12 @@ Today we will cover how we can get data into Python, do stuff with it, and make 
 
 ## Resources
 
+### Data Downloads
+
+ * <a href="https://raw.githubusercontent.com/UIUC-iSchool-DataViz/spring2020/master/week01/data/GDP.csv" download>GDP.csv file</a> from the [FRED](https://fred.stlouisfed.org) database.  (We can also call this file remotely with Pandas so you don't necessarily have to download it).
+ * Where to get data?  Easy place: [Kaggle](https://www.kaggle.com)
+    * we will be using the [movies dataset](data/kaggle_zip_movies.zip)
+
 ### Reading
 
 1. Py4E: Ch. 4 & 7 
