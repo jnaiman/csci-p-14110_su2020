@@ -1,5 +1,5 @@
 ---
-title: Lecture 1 - Intro
+title: Lecture 2 - Flow Control
 layout: lecture
 visible_lec: true
 visible_n: true

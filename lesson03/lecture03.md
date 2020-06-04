@@ -1,5 +1,5 @@
 ---
-title: Lecture 1 - Intro
+title: Lecture 3 - Functions & Data I/O
 layout: lecture
 visible_lec: true
 visible_n: true
