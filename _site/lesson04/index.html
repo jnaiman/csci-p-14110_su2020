@@ -5,9 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
 
 <!-- Begin Jekyll SEO tag v2.6.1 -->
-<title>Lesson 4 - Multi-body Problem: A better solution | CSCI P-14110 Introduction to Programming, Computational Science, and Data Visualization</title>
+<title>Lesson 4 - Intro to Data Viz &amp; More with Pandas | CSCI P-14110 Introduction to Programming, Computational Science, and Data Visualization</title>
 <meta name="generator" content="Jekyll v3.8.5" />
-<meta property="og:title" content="Lesson 4 - Multi-body Problem: A better solution" />
+<meta property="og:title" content="Lesson 4 - Intro to Data Viz &amp; More with Pandas" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="This is the course website CSCI P-14110" />
 <meta property="og:description" content="This is the course website CSCI P-14110" />
@@ -15,7 +15,7 @@
 <meta property="og:url" content="http://localhost:4008/csci-p-14110_su2020/lesson04/" />
 <meta property="og:site_name" content="CSCI P-14110 Introduction to Programming, Computational Science, and Data Visualization" />
 <script type="application/ld+json">
-{"description":"This is the course website CSCI P-14110","headline":"Lesson 4 - Multi-body Problem: A better solution","@type":"WebPage","url":"http://localhost:4008/csci-p-14110_su2020/lesson04/","@context":"https://schema.org"}</script>
+{"description":"This is the course website CSCI P-14110","headline":"Lesson 4 - Intro to Data Viz &amp; More with Pandas","@type":"WebPage","url":"http://localhost:4008/csci-p-14110_su2020/lesson04/","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
     <link href='https://fonts.googleapis.com/css?family=Arvo:400,700,400italic' rel='stylesheet' type='text/css'>
@@ -40,67 +40,21 @@
       </header>
 
       <section>
-                <h1 id="lesson-4---multi-body-problem-a-better-solution">Lesson 4 - Multi-body Problem: A better solution</h1>
+                <h1 id="lesson-4---intro-to-data-viz--more-with-pandas">Lesson 4 - Intro to Data Viz &amp; More with Pandas</h1>
 
-<h2 id="notes">Notes</h2>
+<h2 id="resources">Resources</h2>
 
-<ul>
-  <li><a href="/csci-p-14110_su2020/lesson04/Part1_programming_hermite_notes_lesson02.pdf">Part1_programming_hermite_notes_lesson02.pdf</a></li>
-  <li><a href="/csci-p-14110_su2020/lesson04/Part2_hermite_in2d_nbody.pdf">Part2_hermite_in2d_nbody.pdf</a></li>
-  <li><a href="Part3_programming_readWriteData_keplersData_lesson03.pdf">Part3_programming_readWriteData_keplersData_lesson03.pdf</a></li>
-</ul>
+<h3 id="data-downloads">Data Downloads</h3>
 
-<h2 id="downloads">Downloads</h2>
+<h3 id="reading">Reading</h3>
 
-<h3 id="python-libraries">Python Libraries</h3>
-
-<p><strong>Note: put these in the same directory as your .pynb notebooks.</strong></p>
-
-<ul>
-  <li><a href="hermite_library.py" download="">hermite_library.py</a></li>
-  <li><a href="convert_kepler_data.py" download="">convert_kepler_data.py</a></li>
-  <li><a href="convert_galaxy_data.py" download="">convert_galaxy_data.py</a></li>
-</ul>
-
-<h3 id="data">Data</h3>
-
-<ul>
-  <li><a href="downloads/kepler11data.txt" download="">Kepler 11 System Data</a></li>
-  <li><a href="downloads/kepler101data.txt" download="">Kepler 101 System Data</a></li>
-</ul>
-
-<h4 id="galaxy-snapshot-files---different-resolutions">Galaxy snapshot files - different resolutions</h4>
-
-<ul>
-  <li><a href="galaxySnaps/snap_001_fac1n3.txt" download="">low res - galaxySnaps/snap_001_fac1n3.txt</a></li>
-  <li><a href="galaxySnaps/snap_001_fac1n2.txt" download="">mid res - galaxySnaps/snap_001_fac1n2.txt</a></li>
-  <li><a href="galaxySnaps/snap_001_fac1n1.txt" download="">high res - galaxySnaps/snap_001_fac1n1.txt</a></li>
-</ul>
-
-<h3 id="articles">Articles</h3>
-
-<ul>
-  <li><a href="/csci-p-14110_su2020/lesson02/downloads/integrators.pdf">Integrators Article</a> - this article describes the fundamental problems to solving the motions of multiple gravitating systems and discusses several solvers (including ones we’ve looked at in this class).  (Calculus is involved.)</li>
-</ul>
-
-<h2 id="links">Links</h2>
-
-<ul>
-  <li><a href="http://www.stefanom.org/spc/">Super Planet Crash</a></li>
-  <li><a href="http://save-point.herokuapp.com/dashboard/users.php">Bonus: Orbits Game</a></li>
-  <li>
-    <p><a href="http://www.manybody.org/modest/heggie_split.pdf">More on N-body Units</a></p>
-  </li>
-  <li><a href="https://theskylive.com/3dsolarsystem">Online 3D solar system interactive animation - https://theskylive.com/3dsolarsystem</a></li>
-  <li><a href="https://jakevdp.github.io/PythonDataScienceHandbook/04.12-three-dimensional-plotting.html">More plotting of 3D examples with matplotlib</a></li>
-</ul>
-
-<h3 id="other-exoplanets">Other exoplanets</h3>
-<ul>
-  <li><a href="https://exoplanetarchive.ipac.caltech.edu/">Exoplanet Archive - see “Data –&gt; Confirmed Planets” option (hover over “Data”)</a></li>
-  <li><a href="http://exoplanets.org/">Exoplanet orbit database (deprecated, but with plots)</a></li>
-  <li><a href="https://astroquery.readthedocs.io/en/latest/exoplanet_orbit_database/exoplanet_orbit_database.html">astroquery API</a></li>
-</ul>
+<ol>
+  <li><a href="https://serialmentor.com/dataviz/introduction.html">FDA, Ch. 1: Introduction</a></li>
+  <li><a href="https://serialmentor.com/dataviz/proportional-ink.html">FDA, Ch. 17: The principle of proportional ink</a></li>
+  <li><em>Optional</em>: <a href="http://swcarpentry.github.io/python-novice-gapminder/08-data-frames/index.html">More DataFrame operations with Pandas</a></li>
+  <li><em>Optional:</em> <a href="https://medium.com/multiple-views-visualization-research-explained/same-data-multiple-perspectives-curse-of-knowledge-in-visual-data-communication-d827c381f936">Same Data, Multiple Perspectives</a></li>
+  <li><em>Optional:</em> VAD, Ch. 1: What’s Viz, and Why Do It?</li>
+</ol>
 
 
         <h3>Materials</h3>
