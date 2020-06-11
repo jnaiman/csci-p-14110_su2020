@@ -9,6 +9,9 @@ visible: false
 
 ### Data Downloads
 
+ * we will be using the [movies dataset](data/kaggle_zip_movies.zip) which unzips into [this CSV file](tv_shows.csv).
+
+
 ### Reading
 
 1. <a href="https://serialmentor.com/dataviz/introduction.html">FDA, Ch. 1: Introduction</a> 
