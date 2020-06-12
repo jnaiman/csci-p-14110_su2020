@@ -5,9 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
 
 <!-- Begin Jekyll SEO tag v2.6.1 -->
-<title>Lesson 5 - Kepler’s Planets, Orbits in 3D &amp; Other Python Solvers: Choose your own adventure | CSCI P-14110 Introduction to Programming, Computational Science, and Data Visualization</title>
+<title>Lesson 5 - Holiday! | CSCI P-14110 Introduction to Programming, Computational Science, and Data Visualization</title>
 <meta name="generator" content="Jekyll v3.8.5" />
-<meta property="og:title" content="Lesson 5 - Kepler’s Planets, Orbits in 3D &amp; Other Python Solvers: Choose your own adventure" />
+<meta property="og:title" content="Lesson 5 - Holiday!" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="This is the course website CSCI P-14110" />
 <meta property="og:description" content="This is the course website CSCI P-14110" />
@@ -15,7 +15,7 @@
 <meta property="og:url" content="http://localhost:4008/csci-p-14110_su2020/lesson05/" />
 <meta property="og:site_name" content="CSCI P-14110 Introduction to Programming, Computational Science, and Data Visualization" />
 <script type="application/ld+json">
-{"description":"This is the course website CSCI P-14110","headline":"Lesson 5 - Kepler’s Planets, Orbits in 3D &amp; Other Python Solvers: Choose your own adventure","@type":"WebPage","url":"http://localhost:4008/csci-p-14110_su2020/lesson05/","@context":"https://schema.org"}</script>
+{"description":"This is the course website CSCI P-14110","headline":"Lesson 5 - Holiday!","@type":"WebPage","url":"http://localhost:4008/csci-p-14110_su2020/lesson05/","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
     <link href='https://fonts.googleapis.com/css?family=Arvo:400,700,400italic' rel='stylesheet' type='text/css'>
@@ -40,76 +40,19 @@
       </header>
 
       <section>
-                <h1 id="lesson-5---keplers-planets-orbits-in-3d--other-python-solvers-choose-your-own-adventure">Lesson 5 - Kepler’s Planets, Orbits in 3D &amp; Other Python Solvers: Choose your own adventure</h1>
+                <h1 id="lesson-5---holiday">Lesson 5 - Holiday!</h1>
 
-<h2 id="main-lecture-materials">Main Lecture Materials</h2>
+<p>Please have a lovely day off!  There is some reading for today and the quiz on this is due next week.</p>
 
-<p>Today we’ll continue our simulations in 2D and we’ll start thinking in 3D as well.  There are links to other solvers as well, but they are not required if you like the <code class="language-plaintext highlighter-rouge">Hermite</code> one!</p>
-
-<p>Motivation: <a href="https://theskylive.com/3dsolarsystem">Online 3D solar system interactive animation - https://theskylive.com/3dsolarsystem</a></p>
-
-<h3 id="notes">Notes:</h3>
-
-<ul>
-  <li><a href="/csci-p-14110_su2020/lesson05/Part1_programming_readWriteData_keplersData_lesson05.pdf">Part1_programming_readWriteData_keplersData_lesson05.pdf</a></li>
-  <li><a href="/csci-p-14110_su2020/lesson05/Part2_planetsIn3D_lesson05.pdf">Part2_planetsIn3D_lesson05.pdf</a></li>
-</ul>
-
-<h3 id="python-libraries">Python Libraries</h3>
-
-<p><strong>Note: put these in the same directory as your .pynb notebooks.</strong></p>
-
-<ul>
-  <li><a href="hermite_library.py" download="">hermite_library.py</a></li>
-  <li><a href="convert_kepler_data.py" download="">convert_kepler_data.py</a></li>
-  <li><a href="convert_galaxy_data.py" download="">convert_galaxy_data.py</a></li>
-</ul>
-
-<h3 id="data">Data</h3>
-
-<ul>
-  <li><a href="kepler11data.txt" download="">Kepler 11 System Data</a></li>
-  <li><a href="kepler101data.txt" download="">Kepler 101 System Data</a></li>
-</ul>
-
-<h4 id="galaxy-snapshot-files---different-resolutions">Galaxy snapshot files - different resolutions</h4>
-
-<ul>
-  <li><a href="galaxySnaps/snap_001_fac1n3.txt" download="">low res - galaxySnaps/snap_001_fac1n3.txt</a></li>
-  <li><a href="galaxySnaps/snap_001_fac1n2.txt" download="">mid res - galaxySnaps/snap_001_fac1n2.txt</a></li>
-  <li><a href="galaxySnaps/snap_001_fac1n1.txt" download="">high res - galaxySnaps/snap_001_fac1n1.txt</a></li>
-</ul>
+<h2 id="resources">Resources</h2>
 
 <h3 id="reading">Reading</h3>
 
-<ul>
-  <li><a href="/csci-p-14110_su2020/lesson05/hutspaper.pdf">This paper by Piet Hut</a> talks about the evolution of numerical simulations in science.</li>
-</ul>
-
-<h2 id="other-python-solvers">Other Python Solvers</h2>
-
-<p>You can check out these other solvers either now or come back to later in your life.  Order is in order of decreasing documentation/increasing difficulty.</p>
-
-<h3 id="rebound">Rebound</h3>
-
-<p><a href="https://rebound.readthedocs.io/en/latest/index.html">Rebound</a> has both C and Python implementations to solve N-body equations with a variety of solvers.  There are other examples that include comments on the <a href="https://rebound.readthedocs.io/en/latest/examples.html">Rebound examples page</a> if you find something of interest to explore there (make sure you use only the Python ones).</p>
-
-<ul>
-  <li>
-    <p>The <a href="rebound_solar_system.html">Rebound Solar System Project</a>: uses the <code class="language-plaintext highlighter-rouge">Rebound</code> Python package to calculate up-to-date orbits of our own solar system.  Extension question deals with adding more planets.</p>
-  </li>
-  <li>
-    <p>The <a href="rebound_galaxies.html">Rebound Galaxies Project</a>: uses <code class="language-plaintext highlighter-rouge">Rebound</code> to integrate the motion of the galaxies presented in <a href="../lesson04/index.html">Lesson 4</a>.  Extensions include generating your own initial conditions with <a href="http://jakobherpich.github.io/pyICs/">pyICs</a>.</p>
-  </li>
-</ul>
-
-<h3 id="scipy">SciPy</h3>
-
-<p><a href="https://www.scipy.org/">SciPy</a> is a package that does all kinds of neat scientific calculation stuffs.  Check out <a href="https://www.marksmath.org/classes/Spring2018NumericalAnalysis/code/nBody.html">this example</a> of how to use it to make your own 2D N-body integrator.  How would you extend this to 3D?</p>
-
-<h3 id="others">Others</h3>
-
-<p>There are many <a href="https://github.com/topics/nbody">GitHub repos for N-body Solvers in Python and other languages</a> that you may want to check out.</p>
+<ol>
+  <li><a href="https://serialmentor.com/dataviz/aesthetic-mapping.html">FDA, Ch. 2: Visualizing data: Mapping data onto aesthetics</a></li>
+  <li><em>Optional:</em> VAD, Ch. 2: What: Data Abstraction</li>
+  <li><em>Optional</em>: <a href="http://swcarpentry.github.io/python-novice-gapminder/08-data-frames/index.html">More DataFrame operations with Pandas</a></li>
+</ol>
 
 
         <h3>Materials</h3>
@@ -148,27 +91,6 @@
         
         
         
-	
-        <li>Lecture 5, Part 1 - Kepler's Orbits: (<a href="/csci-p-14110_su2020/lesson05/lecture05_p1.html">view</a>,
-          <a href="https://github.com/jnaiman/csci-p-14110_su2020/blob/gh-pages/lesson05/lecture05_p1.md">source</a>, <a href="/csci-p-14110_su2020/lesson05/lecture05_p1.html?showNotes=false">present</a>)</li>
-	
-	
-        
-        
-        
-	
-        <li>Lecture 5, Part 2 - Multibody Motion in 3D: (<a href="/csci-p-14110_su2020/lesson05/lecture05_p2.html">view</a>,
-          <a href="https://github.com/jnaiman/csci-p-14110_su2020/blob/gh-pages/lesson05/lecture05_p2.md">source</a>, <a href="/csci-p-14110_su2020/lesson05/lecture05_p2.html?showNotes=false">present</a>)</li>
-	
-	
-        
-        
-        
-	
-        <li>Optional - Galaxy Multibody Motion in 3D: (<a href="/csci-p-14110_su2020/lesson05/lecture05_p3.html">view</a>,
-          <a href="https://github.com/jnaiman/csci-p-14110_su2020/blob/gh-pages/lesson05/lecture05_p3.md">source</a>, <a href="/csci-p-14110_su2020/lesson05/lecture05_p3.html?showNotes=false">present</a>)</li>
-	
-	
         
         
         
@@ -178,27 +100,6 @@
         
         
         
-        
-        
-        
-        
-        
-        
-        
-        
-	
-	
-        <li>Rebound Galaxies: (<a href="/csci-p-14110_su2020/lesson05/rebound_galaxies.html">view</a>,
-          <a href="https://github.com/jnaiman/csci-p-14110_su2020/blob/gh-pages/lesson05/rebound_galaxies.md">source</a>)</li>
-	
-        
-        
-        
-	
-	
-        <li>Rebound Solar System: (<a href="/csci-p-14110_su2020/lesson05/rebound_solar_system.html">view</a>,
-          <a href="https://github.com/jnaiman/csci-p-14110_su2020/blob/gh-pages/lesson05/rebound_solar_system.md">source</a>)</li>
-	
         
         
         
@@ -206,28 +107,6 @@
         
         
 <!--        
-        
-        
-        
-        
-        <li>PDF Part1_programming_readWriteData_keplersData_lesson05: 
-         (<a href="/csci-p-14110_su2020/lesson05/Part1_programming_readWriteData_keplersData_lesson05.pdf">view</a>
-        </li>
-        
-        
-        
-        <li>PDF Part2_planetsIn3D_lesson05: 
-         (<a href="/csci-p-14110_su2020/lesson05/Part2_planetsIn3D_lesson05.pdf">view</a>
-        </li>
-        
-        
-        
-        <li>PDF hutspaper: 
-         (<a href="/csci-p-14110_su2020/lesson05/hutspaper.pdf">view</a>
-        </li>
-        
-        
-        
         
         
         
@@ -247,48 +126,6 @@
         
         
         
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        <li>Notebook Optional_animations_lesson05: 
-         (<a href="../nbv.html?notebook_name=%2Fcsci-p-14110_su2020%2Flesson05%2FOptional_animations_lesson05.ipynb">view</a>,
-         <a href="/csci-p-14110_su2020/lesson05/Optional_animations_lesson05.ipynb">download</a>)</li>
-        
-        
-        
-        <li>Notebook Optional_galaxySimulations_3d_lesson05: 
-         (<a href="../nbv.html?notebook_name=%2Fcsci-p-14110_su2020%2Flesson05%2FOptional_galaxySimulations_3d_lesson05.ipynb">view</a>,
-         <a href="/csci-p-14110_su2020/lesson05/Optional_galaxySimulations_3d_lesson05.ipynb">download</a>)</li>
-        
-        
-        
-        <li>Notebook Part1_programming_readWriteData_keplersData_lesson05: 
-         (<a href="../nbv.html?notebook_name=%2Fcsci-p-14110_su2020%2Flesson05%2FPart1_programming_readWriteData_keplersData_lesson05.ipynb">view</a>,
-         <a href="/csci-p-14110_su2020/lesson05/Part1_programming_readWriteData_keplersData_lesson05.ipynb">download</a>)</li>
-        
-        
-        
-        <li>Notebook Part2_planetsIn3D_lesson05: 
-         (<a href="../nbv.html?notebook_name=%2Fcsci-p-14110_su2020%2Flesson05%2FPart2_planetsIn3D_lesson05.ipynb">view</a>,
-         <a href="/csci-p-14110_su2020/lesson05/Part2_planetsIn3D_lesson05.ipynb">download</a>)</li>
-        
-        
-        
-        <li>Notebook Untitled: 
-         (<a href="../nbv.html?notebook_name=%2Fcsci-p-14110_su2020%2Flesson05%2FUntitled.ipynb">view</a>,
-         <a href="/csci-p-14110_su2020/lesson05/Untitled.ipynb">download</a>)</li>
-        
-        
-        
-        <li>Notebook inClass_lesson05: 
-         (<a href="../nbv.html?notebook_name=%2Fcsci-p-14110_su2020%2Flesson05%2FinClass_lesson05.ipynb">view</a>,
-         <a href="/csci-p-14110_su2020/lesson05/inClass_lesson05.ipynb">download</a>)</li>
         
         
         
