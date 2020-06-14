@@ -9,6 +9,7 @@ visible: false
 
 ### Data Downloads
 
+ * <a href="https://uiuc-ischool-dataviz.github.io/spring2019online/week01/images/stitch_reworked.png" download>Reworked Stitch Image</a>
 
 
 ### Reading
