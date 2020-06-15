@@ -7,6 +7,11 @@ visible: false
 
 ## Resources
 
+### Python Library downloads
+
+ * <a href="image_manipulations.py" download>Image Manipulation library (`image_manipulations.py`)</a>
+
+
 ### Data Downloads
 
  * <a href="https://uiuc-ischool-dataviz.github.io/spring2019online/week01/images/stitch_reworked.png" download>Reworked Stitch Image</a>
