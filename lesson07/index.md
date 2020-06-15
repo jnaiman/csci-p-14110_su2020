@@ -3,21 +3,20 @@ layout: lesson
 visible: false
 ---
 
-# Lesson 7 - Info Viz Examples
+# Lesson 7 - Intro to maps, beginning interactivity with ipywidgets
 
-Today we will cover more on [widgets in python](https://ipywidgets.readthedocs.io/en/latest/) and how to combine them to make interactive plots in Jupyter notebooks.
+## Resources
 
-If we have time, we will build a [dashboard](https://www.klipfolio.com/resources/articles/what-is-data-dashboard) with a [Bloomberg tool called bqplot](https://www.techatbloomberg.com/blog/bringing-interactivity-data-bqplot/).
+### Python Library downloads
 
-## Notes
 
-* [Part1_programming_moreOnWidgets_lesson07.pdf](Part1_programming_moreOnWidgets_lesson07.pdf)
-* [Part2_programming_heatMap_lesson07.pdf](Part2_programming_heatMap_lesson07.pdf)
+### Data Downloads
 
-## More Resources
 
-* [ipywidgets docs](https://ipywidgets.readthedocs.io/en/latest/)
-* [Bloomberg article about bqplot](https://www.techatbloomberg.com/blog/bringing-interactivity-data-bqplot/)
-* [bqplot github](https://github.com/bloomberg/bqplot)
-* [bqplot examples video (~30 min)](https://www.youtube.com/watch?v=rraXF0EjRC8)
-* [What is a dashboard - business perspective](https://www.klipfolio.com/resources/articles/what-is-data-dashboard)
+### Reading
+
+1. <a href="https://serialmentor.com/dataviz/geospatial-data.html">FDA, Ch. 15: Visualizing geospatial data</a> 
+1. <a href="https://serialmentor.com/dataviz/histograms-density-plots.html">FDA, Ch. 7: Visualizing distributions: Histograms and density plots</a> 
+1. <a href="https://ipywidgets.readthedocs.io/en/latest/examples/Widget%20Basics.html">This intro to ipywidgets</a> (you don't have to "get" everything on this page, just read and play with some widgets!) 
+1. *Optional*: <a href="https://geopandas.org/">Geopandas Docs</a> & <a href="https://github.com/jupyter-widgets/ipywidgets/blob/master/docs/source/examples/Index.ipynb">Example Widgets Notebooks</a> 
+1. *Optional*:  VAD Ch. 8: Arrange Spatial Data, Ch. 11: Manipulate View & Ch. 7: Arrange Tables 
