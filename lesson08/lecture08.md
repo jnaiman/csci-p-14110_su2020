@@ -493,10 +493,27 @@ What do you notice? (circular, bit, etc).
 ## The Kepler Planet Database
 
 [NASA Exoplanet Archive](https://exoplanetarchive.ipac.caltech.edu/)
-  * [Confirmed Planets](https://exoplanetarchive.ipac.caltech.edu/cgi-bin/TblView/nph-tblView?app=ExoTbls&config=planets&constraint=pl_facility%20like%20%27Transiting%20Exoplanet%20Survey%20Satellite%20(TESS)%27)
+  * <a href="https://exoplanetarchive.ipac.caltech.edu/cgi-bin/TblView/nph-tblView?app=ExoTbls&config=planets&constraint=pl_facility%20like%20%27Transiting%20Exoplanet%20Survey%20Satellite%20(TESS)%27">Confirmed Planets </a>
 
 notes:
 we'll be grabbing data from the NASA exoplanet archive which has a lot of info about plannets found with Kepler & more recently TESS which is a new sattelite
+
+*open table and poke around* => confirmed planets
+
+ALOT of info, but we can see some somewhat familar things: like the semi-major axis, planet mass, planet radius (size of planet) & also info about the star as well
+
+---
+
+## The Kepler Planet Database
+
+[NASA Exoplanet Archive](https://exoplanetarchive.ipac.caltech.edu/)
+  * <a href="https://exoplanetarchive.ipac.caltech.edu/cgi-bin/TblView/nph-tblView?app=ExoTbls&config=planets&constraint=pl_facility%20like%20%27Transiting%20Exoplanet%20Survey%20Satellite%20(TESS)%27">Confirmed Planets </a>
+  
+We'll explore this dataset in more detail for the remainder of the class.
+
+notes:
+
+**MIGHT BE GOOD TO TAKE A BREAK HERE**
 
 ---
 
