@@ -295,6 +295,21 @@ $$ \frac{x^2}{a^2} + \frac{y^2}{b^2} = 1$$
 
 <img src="https://www.mathsisfun.com/geometry/images/ellipse-axes.svg" width="600"/>
 
+* $a$ = semi-major axis
+* $b$ = semi-minor axis
+
+notes: here a & b are the semi-major and semi-minor axis, respectively
+
+---
+
+## Ellipses
+
+There are many ways to write this ellipse shape as a formula.  In cartesian, or rectangular coordinates:
+
+$$ \frac{x^2}{a^2} + \frac{y^2}{b^2} = 1$$
+
+<img src="https://www.mathsisfun.com/geometry/images/ellipse-axes.svg" width="600"/>
+
 notes: these are for ellipses that are centered at the origin
 
 How does this equation change if the center of the ellipse is at a different position?  Lets say x0 and y0?
