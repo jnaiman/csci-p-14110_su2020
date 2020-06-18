@@ -21,6 +21,8 @@ visible: false
 
 ### Data Downloads
 
+ * We'll be using this <a href="https://jnaiman.github.io/csci-p-14110_su2020/lesson08/planets_2020.06.17_14.04.11.csv" download>NASA planet database CSV file (planets\_2020.06.17\_14.04.11.csv)</a> today.
+
 
 ### Reading
 
