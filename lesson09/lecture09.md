@@ -1,434 +1,428 @@
 ---
-title: Lecture 9 - Designing For the Web
+title: Lecture 9
 layout: lecture
 visible_lec: true
 visible_n: true
 ---
 
-## Warm-Up Activity
+<!-- .slide: class="titleslide" -->
 
-1. What is the visualization trying to show?
-1. What are its methods?
-1. What are the strengths / weaknesses?
+# Data Visualization
 
-https://projects.fivethirtyeight.com/mortality-rates-united-states/
 
-Don't worry - there aren't necessarily right or wrong answers here!
-
----
-
-## This lecture
-
- * Graphics concepts and considerations for the web
- * Surfaces and meshes
- * Sketchfab & interactive 3D movies online for planet and galaxy simulations
+# Intro to Programming & Data Viz
+<div style="height: 6.0em;"></div>
+## Jill P. Naiman
+## Summer 2020
+## Lecture 9
 
 ---
 
-## 3D Computer Graphics
+## Last time
 
- * Composed of virtual 3D objects
- * Often time evolving (animated)
- * Displayed on 2D screens
- * Attempts to simulate photorealism to some extent
+ * Crash Course in Astronomy & intro to the Planetary Dataset
+ * object-oriented programming & Updating object traits with `traitlets`
+ * Linked views with bqplot
  
-notes: note these can also be displayed on 3D screens, but the way that happens is a little different
+notes: so, last time we continued doing some of our info-viz stuff with some astronomy data and we played with linking views and interactivity
 
 ---
 
-## Computer Graphics Terms
+## This time
 
- * Real-time vs Pre-Rendered graphics
- * Frames vs Timesteps
-
-<img src="images/timestepframestep.gif" width="600"/>
-
-notes:
-real-time graphics refresh the screen faster than the eye perceives, usually at least 30 times a second. Pre-rendered can take all the time in the world.
-
-Frames are individual images that when strung together in time create the illusion of motion. They are the "timesteps" of a movie. But scientific data also have "timesteps" which may not be synchronized with the speed of the movie.
-
-You'll notice in this GIF, the frame rate and the time step rate are different - we are zooming out quicker than we are updating the data in the images
-
----
-
-## Computer Graphics Acronyms
-
- * VFX - visual effects
- * CGI - computer graphics imagery
- * FPS - frames per second
- * GUI - graphic user interface
- * HUD - heads up display
+ * sci-viz vs. info-viz
+ * movies - 2D & 3D
+ * 3D interactivity
+ * Publish your viz on github.io (*optional*)
  
-notes: you aren't required to remember any of these, but if you see them pop up, here they are
+notes: so, last time we continued doing some of our info-viz stuff with some astronomy data and we played with linking views and interactivity
+
 
 ---
 
-## Common Frame Rates
+## Information Visualization
 
- * 24 FPS - theatrical films
- * 30 FPS - TV and specialty theaters
- * 48 FPS, 60 FPS - video games, interactive graphics, virtual reality
- * 120 FPS - really good virtual reality
+So far: Spatial encoding is chosen by the designer
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/pfiHFqnPLZ4?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<img src="images/circlesTree.png" width="500"/>
+
+notes: so far, a lot of our placement of objects has been up to us
+
+---
+
+## Scientific Visualization
+
+Sci Viz: Spatial encoding is provided in the data
+
+<img src="images/orf2D.png" width="500"/>
+
+notes: but with sci viz, we are usually dealing with spatial data - so we are told by the 
+science where we should be placing things in 3D space
+
+we did this sort of thing in 2D for data on maps, but this gives even more detail on 
+where each data point should be placed
+
+
+---
+
+## Spatial Data
+
+ 1. Geometry
+  * Volumetric Fields
+
+<img src="images/smoke.gif" width="800"/>
+
+note: there are different kinds of spatial datasets
+
+Here is shown some volumetric data - i.e. you are given points of things in 3D space
+
+shown here is a simulation in Houdini (a special effects software package) showing smoke rising
+
+The left plot shows the simulation data points, the middle plot shows how they are interpolated to a surface and the right shows how they are "rendered" i.e. made into a movie using a smoke "shader" which dictates how light rays will travel through the object
+
+---
+
+## Spatial Data
+
+ 1. Geometry
+   * Polygons
+
+<img src="images/wheel.gif" width="800"/>
+
+notes: another thing you will see a lot is 3-dimensional surfaces like the one shown here
+
+Instead of specifying data at each point in the 3D volume, we are specifying the surface - i.e. an interconnected list of polygons that makes this shape
+
+(we'll actually play with surfaces later in class and volumes either next week or the last week)
+
+
+---
+
+## Spatial Data
+
+ 1. Geometry
+   * Polygons
+   * Point Clouds
+
+<img src="images/cme.gif" width="800"/>
 
 notes:
 
-you can note if you try to follow the 15 or 30 FPS (frames per second) with your eye you see that it is jumpy
+Sometimes you'll see data shown by points.  Before, we were showing data that "filled up" the space, but here point clouds are almost like infinitely small data points at specific locations in space
 
-24 fps is considered the absolute minimum necessary frequency so that people don't perceive individual frames.
+point clouds can be static, or they can have physics which make them a "particle system".
 
-48 fps is widely considered so fast the human eye can't perceive any separation at all - but 60 fps is safer.
-
-if you watch a TV and it seems distractingly smooth, it's probably doing frame interpolation to make 30fps content play back at 60fps.
-
-This youtube video actually only plays at 60FPS, so the 120 ball is kind of pointless.
+FYI this is a non-final render of some data from the "Solar Super Storms" movie that the AVL created
 
 ---
 
-## 3D Geometry
+## Spatial Data
 
-All 3D geometry is represented as:
+ 2. Volumetric Fields
 
- * Points
-
-<img src="images/points.png" width="600"/>
-
-notes: how do we represent geometry in space? one way is points...
-
----
-
-## 3D Geometry
-
-All 3D geometry is represented as:
-
- * Points
- * Edges
-
-<img src="images/edges.png" width="600"/>
-
----
-
-## 3D Geometry
-
-All 3D geometry is represented as:
-
- * Points
- * Edges
- * Surfaces
-
-<img src="images/surfaces.png" width="600"/>
-
-notes: we can connect these points and images to make surfaces
-
----
-
-## 3D Geometry
-
-All 3D geometry is represented as:
-
- * Points
- * Edges
- * Surfaces
- * Volumes
-
-<img src="images/voxels.png" width="600"/>
-
-notes: or we can give the 3D surfaces some depth and make them into shapes
-
-here these 3D cubes are called "voxels" which are similar to 2D "pixels" but for volumes
-
----
-
-## 3D Geometry
-
-<iframe src="https://player.vimeo.com/video/169599296?color=949494&title=0&byline=0&portrait=0" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
-
-Link: https://player.vimeo.com/video/169599296?color=949494&title=0&byline=0&portrait=0
+<img src="images/redDropShort.gif" width="600"/>
 
 notes:
+How do you represent something like this with data?
 
-You can convert between points, surfaces and volumes, ofthen to really cool effects like shown - you can get some bananas permutations.
+You need scalars to describe things like material.
+
+You need vectors to describe things like motion (velocity). 
 
 ---
 
-## 3D Geometry
+## Spatial Data
 
-Surfaces can be encoded as:
+ 2. Volumetric Fields
+    * Scalar
 
- * Implicit primitives
-
-<img src="images/primitive.png" width="600"/>
+<img src="images/grids.gif" width="600"/>
 
 notes:
-primitives are defined by mathematical functions. This sphere is defined by a center position and a radius.
+This sequence reveals the underlying 3D grids of several scalar fields including:
+
+H1 density
+
+H2 density
+
+photogamma
+
+temperature
+
+metallicity
+
+Basically, you can think of the centers of each cubes specifying where the data points actually are - more densely packed cubes means *higher resolution* data
 
 ---
 
-## 3D Geometry
+## Spatial Data
 
-Surfaces can be encoded as:
+ 2. Volumetric Fields
+    * Scalar
 
- * Implicit primitives
- * Polygonal Meshes
-
-<img src="images/quadsSmall.jpg" width="600"/>
+<img src="images/sapasmons.jpg" width="500"/>
 
 notes:
-Quadrilaterals are a good way to see the flow of geometry, which artists like, but quads can bend.
+Fields can be 2D or 3D. Images can be used as 2D data fields.
+
+AVL used this image from the Magellan satellite to create a "displacement map" for this venusian volcano called "Sapas Mons".
+
+2D fields can also be layered in formats common to GIS, or Hollywood formats like EXR.
 
 ---
 
-## 3D Geometry
+## Spatial Data
 
-Surfaces can be encoded as:
+ 2. Volumetric Fields
+    * Scalar
+    * Vector
 
- * Implicit primitives
- * Polygonal Meshes
+[Windy Weather Map](https://www.windy.com)
 
-<img src="images/triangles.png" width="600"/>
+<img src="images/maria.png" width="600"/>
 
 notes:
-Triangles cannot bend because three points define a plane. So automatic geometry like the stuff you use in science is more often going to be triangles.
+Windy is an interactive wind velocity map. It's always interesting to look at, but especially during hurricane season. I captured this image as Hurricane Maria flirted with the East coast in Sept 2017.
 
 ---
 
-## 3D Geometry
+## Spatial Data
 
-Surfaces can be encoded as:
+ 2. Volumetric Fields
+    * Scalar
+    * Vector
 
- * Implicit primitives
- * Polygonal Meshes
- * NURBS or Bezier Surfaces
+Its even possible to do this in real time: [Earth map](https://earth.nullschool.net/)
 
-<img src="images/nurbs.png" width="600"/>
+
+
+---
+
+## Spatial Data
+
+ 2. Volumetric Fields
+    * Scalar
+    * Vector
+
+<img src="images/streamlines.gif" width="600"/>
 
 notes:
-This is a NURBS sphere. You can see the control vertices are floating off the surface. Every patch on the surface is influenced by many of the neighboring points.
+In this visualization we're seeing 3D velocity streamlines.
 
-Here if I wanted to deform this surface, I could pull at one of the blue points and the shape of the surface would change.
+We're ALSO seeing a scalar volume called "vorticity" which is directly derived from the velocity field by taking a mathematical operation called the "curl".
+
+In this case we are plotting *both* scalar (volume glow) and vector (streaming lines) data in the same viz!
+
+Also from solar super storms
 
 ---
 
-## 3D Geometry
+## Spatial Data
 
-Surfaces can be encoded as:
+ 2. Volumetric Fields
+    * Uniform or non-uniform
+    * Rectangular or non-rectangular
 
- * Implicit primitives
- * Polygonal Meshes
- * NURBS or Bezier Surfaces
- * Subdivision Surfaces
-
-<img src="images/subdivs.png" width="600"/>
+<img src="images/gridTypes.gif" width="400"/>
 
 notes:
-Subdivision surfaces are like those adaptive volumes we saw last week. You can add detail where you want it.
+Adaptive mesh refinement is an especially efficient 3D storage for datatypes that have small areas of high detail.
+
+This is why dealing with scientific data can be a little tricky - it can be hard to make surfaces or volumes out of irregularly gridded data
 
 ---
 
-## 3D Geometry
+## Spatial Data Types
 
-Datasets with many fields called "attributes":
+ 1. Statistical
+    * Star species
+    * Atom prevalence
+ 1. Observational
+    * Telescope images
+    * Microscope images
+    * LIDAR
+ 1. Simulated by computer models
+    * First principles physics
+    * Astronomy, geology, biology
 
- 1. Transform Attributes (translate, rotate, scale)
+---
 
-<img src="images/xyz.gif" width="600"/>
+## Visualizing Point Data
+
+ * Dots with scale
+
+<img src="images/pointCloud.gif" width="600"/>
+
+notes: some other, less used data types include things like dots with scale
+
+---
+
+## Visualizing Point Data
+
+ * Dots with scale
+ * Sprites
+
+<img src="images/energy.gif" width="600"/>
 
 notes:
-These transform attributes are the same for all objects.
+All the moving dots in this video are represented by a gaussian splat image. You can see how they are adjusted to be different size and color (the important things are the purple ones)
 
-Recall we discussed some of these in earlier classes for 2D plots.  Same principle here.
+FYI this is a little pre-final version of an upcoming movie called "Birth of Planet Earth"
 
 ---
 
-## 3D Geometry
+## Visualizing Point Data
 
-Datasets with many fields called "attributes":
+ * Dots with scale
+ * Sprites
 
- 1. Transform Attributes (translate, rotate, scale)
- 1. Shape Attributes (radius, bumpyness, twistyness)
-
-<img src="images/attributes.gif" width="600"/>
+<img src="images/energyLetters.gif" width="600"/>
 
 notes:
-shape attributes depend totally on what the shape is.
-
-These are something you won't really see in 2D unless you start modifying 2D shapes with some weird transforms.
+But gaussian blur isn't the only way to put a sprite on a point. This version used text instead. (purple q's instead of sprites)
 
 ---
 
-## OpenGL
+## Visualizing Point Data
 
-Before most computers could show graphics of any kind, several companies began to compete for proprietary formats.
+ * Dots with scale
+ * Sprites
+ * Meshing
 
-A company called Silicon Graphics stepped in and created an Open Source specification for computer graphics called OpenGL. 
-
-To this day, most software graphics you see are rendered using some version of OpenGL - including the whole Mac operating system.
+<img src="images/canup.gif" width="600"/>
 
 notes:
-Many other open source projects have copied this model, such as OpenCV (computer vision), OpenCL (gpus), and OpenMP (multi-processing).
+This is a test AVL worked on with an SPH "smooth particle hydrodynamics" dataset where we created a surface across points. The surface was generated at a density threshold - aka, it was an infinitely thin shell shrinkwrapped onto all particles that were above a certain density.
+
+This is a way to turn particles into surfaces or polygons.
+
+We'll play with surfaces later
 
 ---
 
-## WebGL
+## Visualizing Polygons
 
-OpenGL is primarily intended for C-style programming.
+ * Vector lines with width, can be filled
 
-WebGL implements the same set of tools for rendering through a web browser. This allows us to natively render 3D content on the internet!
+<img src="images/platecarree.png" width="600"/>
 
----
-
-## SketchFab & ipyvolume
-
-SketchFab uses WebGL to render YOUR 3D data in a 3D viewport in a web browser. 
-
-[SketchFab.com](https://sketchfab.com)
-
-ipyvolume uses WebGL to render volumes to your jupyter notebook.
+notes:
+We're already familiar with this data from MAPS week.
 
 ---
 
-## Rendering in 3D: From 3D objects to images
+## Visualizing Polygons
 
-Our task is to take our physical description of 3D space and convey to the computer how to bounce light around.
- 
+ * Vector lines with width, can be filled
+ * Direct rendering of architectural schematics
 
----
+<img src="images/lsst.gif" width="600"/>
 
-## Rendering in 3D: From 3D objects to images
-
-Our task is to take our physical description of 3D space and convey to the computer how to bounce light around.
- 
-For example:
-
-<img src="https://news.cnrs.fr/sites/default/files/styles/visuel_principal/public/assets/images/130724_alma_starbust_01.jpg" width="800" />
-
-Image Credit: ALMA & Erik Rosolowsky
-
-notes: in this image there are layers of transmission and absorption (a transmission function encodes this) which added together make this volume rendering
+notes:
+Sometimes you will be given a description of geometric objects that you need to construct.
 
 ---
 
-## Rendering in 3D: From 3D objects to images
+## Visualizing Polygons
 
-Our task is to take our physical description of 3D space and convey to the computer how to bounce light around.
+ * Vector lines with width, can be filled
+ * Direct rendering of architectural schematics
+ * Direct rendering of 3D scans (pre-meshed)
 
-We talked about this in abstract but today we'll get practicle:
-1. learn how to turn our numerical simulations into 3D geometry files
-1. make aesthetic choices motivated by physics
-1. load our models into MeshLab to "debug"
-1. load final(ish) models into Sketchfab to make 3D movies
+<img src="images/mammoth.gif" width="600"/>
 
----
-
-## Software
-
-1. Setup a Sketchfab account
-1. Download MeshLab
-
-notes: actually pause in class to do this!
+notes:
+Sometimes you will get something that was originally generated from a point cloud but has already been meshed. Domain experts sometimes have access to better meshing tools, particularly in the realm of 3D scanning.
 
 ---
 
-## Planets - Texture Mapping
+## Visualizing Scalar Fields
 
-<!-- .slide: data-background-image="images/textureMapping/textureMapping.001.jpeg" data-background-size="auto 75%" -->
+ * Slice
 
-notes: we will do something called texture mapping where we "wrap" a high resolution image on a low resolution mesh object
+<img src="images/mri.png" width="600"/>
 
-here you can see how this works for a face, and it indeed looks creepy
+notes:
+You might remember from Week 5 when we played with this brain scan data - this is only a single image slice out of a 3D gridded dataset.
 
----
-
-## Planets - Texture Mapping
-
-<!-- .slide: data-background-image="images/textureMapping/textureMapping.002.jpeg" data-background-size="auto 75%" -->
-
-notes: we will do this with our planets as we will have very low resolution spheres
-
-why? this is actually a graphics trick that is widely used - it turns out is more computationally intensive to render lots of polygons than few polygons and high resolution textures
+Even if you're not showing your final visualization as a slice, this is a good step for understanding and troubleshooting. As we've mentioned before, reducing dimensionality makes things clearer to the human brain.
 
 ---
 
-## Planets - Texture Mapping
+## Visualizing Scalar Fields
 
-<!-- .slide: data-background-image="images/textureMapping/textureMapping.003.jpeg" data-background-size="auto 75%" -->
+ * Slice
+ * Isosurface
 
-notes: here are a few of the texture maps that are included with the files you'll download for your 3D movies
+<img src="images/isocontours.png" width="400"/>
 
----
-
-<!-- .slide: data-background-image="images/objFiles/objFiles.001.jpeg" data-background-size="auto 95%" -->
-
-notes: we'll go through the code in a moment, but basically, you'll run some code with what sorts of "planets" your planet simulations are and you'll end up with a directory called something like "MyPlanetSystem"
-
-in this directory you will have the planet textures and two files an *obj*, or object file, and an *mtl*, or material, file
-
-these files do different things to combine to make your model
+notes:
+You have probably seen this type of topographic map where lines indicate elevation. These lines are called isocontours. You can combine isocontours to get isosurfaces.
 
 ---
 
-<!-- .slide: data-background-image="images/objFiles/objFiles.002.jpeg" data-background-size="auto 95%" -->
+## Visualizing Scalar Fields
 
-notes: your obj file gives vertex information geometric locations where we should "pin" our texture maps
+ * Slice
+ * Isosurface
 
-the vertexes tell us where each "square" that makes up our sphere goes - you can see this sort of in this image here
+<img src="images/isosurfaces.png" width="700"/>
 
----
+notes:
+This is an isosurface of a tornado-forming storm cloud, and another of a supernova that the scientist called "the walnut".
 
-<!-- .slide: data-background-image="images/objFiles/objFiles.003.jpeg" data-background-size="auto 95%" -->
-
-notes: our material files can give us information about background colors (which we won't be using) and also the names of any texture maps we'll be using like "sun_texture1.jpg" for example
-
----
-
-<!-- .slide: data-background-image="images/objFiles/objFiles.004.jpeg" data-background-size="auto 95%" -->
-
-notes: you will use these files to import into MeshLab and upload to sketchfab
-
-I *highly* recommend you look at them in MeshLab first since processing models to Sketchfab takes a while!
+Isosurfaces can make analysis easier.
 
 ---
 
-<!-- .slide: data-background-image="images/objFiles/objFiles.005.jpeg" data-background-size="auto 95%" -->
+## Visualizing Scalar Fields
 
-notes: some tips and tricks - for sketchfab be sure you select *all* files to upload
+ * Slice
+ * Isosurface
+ * 3D Volumetric Rendering
 
----
+<img src="images/bock.gif" width="600"/>
 
-<!-- .slide: data-background-image="images/objFiles/objFiles.006.jpeg" data-background-size="auto 95%" -->
+notes:
+But of course, you can always render the volume as a volume too. This is a volumetric tornado-forming storm cloud by Dave Bock who also works at the NCSA. 
 
-notes: when debugging in MeshLab when you first upload you might see some black spheres - to fix this go to the "Render" part of the tool bar and select "Color" and then "Per Mesh"
-
----
-
-<!-- .slide: data-background-image="images/plyFiles/plyFiles.001.jpeg" data-background-size="auto 95%" -->
-
-notes: if you have been doing galaxy simulations you'll also have an option to upload those as well in a different file format called "PLY" which gives the dot locations and their colors
-
-notice that these can *only* be uploaded on sketchfab so its recommended you try out the planet files first to get the hang of things
+While this looks similar to the volume rendering at the beginning of class its a better representation of reality - this includes a lot more physics, making it a scientific dataset.
 
 ---
 
-<!-- .slide: data-background-image="images/miscSlides/miscSlides.005.jpeg" data-background-size="auto 95%" -->
+## Visualizing Vector Fields
 
-notes: if you have tried a few different models and are ready to start making things more complex, you can start adding in physically modivated sizes and planet textures to your viz
+ * Arrow glyphs
 
-for example, depending on the mass of your star, it should have a different size and color as shown by this chart right here
+<img src="images/arrows.gif" width="700"/>
 
----
+notes:
+vectors are often represented with arrows at specific points
 
-<!-- .slide: data-background-image="images/miscSlides/miscSlides.006.jpeg" data-background-size="auto 95%" -->
-
-notes: the same thing is true of planets - depending on their mass, they usually have different size
-
-additionally, their mass and size determines what type of planet - is it earth like and therefore you should use a mars/earth texture?  Or is it more jupyter like and you should use a jupyter or saturn texture?
-
-is it far out from the star and gaseous? If so, maybe a neptune texture
+I'm actually not sure what this is showing, but my guess is magnetic field lines, probably in some explosive astro event (like a super novae or something)
 
 ---
 
-# Let's do some 3D planets with Python!
+## Visualizing Vector Fields
 
+ * Arrow glyphs
+ * Streamlines / Streamtubes
+    * Particle Advection!
+
+<img src="images/tornado.gif" width="600"/>
+
+notes:
+But you can also show streamlines, which track vectors across the whole grid. Particle advection is releasing massless particles into a vector field, letting the vectors push them around, and tracing their progress.
+
+This tornado visualization actually shows arrow on the ground AND streamlines in the air.
+
+---
+
+## yt
+
+yt is an open-source, permissively-licensed python package for analyzing and visualizing volumetric data.
+
+[yt-project.org](https://yt-project.org/)
+
+There is a big yt community at the iSchool and NCSA!
 
