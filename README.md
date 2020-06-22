@@ -1,6 +1,6 @@
 # Course Template
 
-You have reached the github repo for CSCI P-14110, taught in the Summer of 2019 at the Harvard Pre-College Program.
+You have reached the github repo for CSCI P-14110, taught in the Summer of 2020 at the Harvard Pre-College Program.
 
 This repository is a template for managing coursework using GitHub pages.  It
 uses the theme [dinky](https://github.com/pages-themes/dinky),
