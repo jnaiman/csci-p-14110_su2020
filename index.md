@@ -5,7 +5,7 @@ layout: index
 This is the course website for {{site.data.class.course.name}}, instructed by
 {{site.data.class.instructor.name}} ({{site.data.class.instructor.email}}).
 
-The Canvas webpage is where Assignments will be posted: TBD
+The Canvas webpage is where Assignments will be posted: https://canvas.harvard.edu/courses/72794
 
 Slack site is: TBD
 
@@ -28,4 +28,9 @@ Some handy references you might appreciate:
 ## Extra programming resources
 
  * [Intro to Programming by E.Wickes](https://github.com/elliewix/IS-452-Spring2020) which is much more text-data based
+ 
+## Last iterations of this class (and related classes)
+
+ * [CSCI P-14110, Summer 2019](https://jnaiman.github.io/csci-p-14110_su2019/)
+ * [Data Viz, Spring 2020, UIUC](https://uiuc-ischool-dataviz.github.io/spring2020/)
 
