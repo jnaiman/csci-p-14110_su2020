@@ -20,6 +20,7 @@ visible: false
 ### Data Downloads
 
  * We'll be using this <a href="https://jnaiman.github.io/csci-p-14110_su2020/lesson08/planets_2020.06.22_10.10.17.csv" download>NASA planet database CSV file (planets\_2020.06.22\_10.10.17.csv)</a> today.
+ * And this <a href="data.zip" download>set of simulated orbits</a> today.
 
 
 ### Reading
