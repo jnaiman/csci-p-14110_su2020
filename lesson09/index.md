@@ -30,3 +30,6 @@ visible: false
 
 ### Reading
 
+1. <a href="https://serialmentor.com/dataviz/time-series.html">FDA, Ch. 13: Visualizing time series</a> 
+1. *Optional*: <a href="https://yt-project.org/">yt project</a>; <a href="https://ipyvolume.readthedocs.io/en/latest/">ipyvolume docs</a> 
+1. *Optional*: [info about GitHub pages (video on page)](https://pages.github.com/)
