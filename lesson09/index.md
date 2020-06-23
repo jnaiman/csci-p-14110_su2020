@@ -18,6 +18,8 @@ visible: false
 
  * <a href="https://raw.githubusercontent.com/jnaiman/csci-p-14110_su2020/master/lesson09/hermite_library.py" download>Hermite Sims Library (`hermite_library.py`)</a>
  * <a href="https://raw.githubusercontent.com/jnaiman/csci-p-14110_su2020/master/lesson09/convert_kepler_data.py">Conversions Library (`convert_kepler_data.py`)</a>
+ * <a href="https://raw.githubusercontent.com/jnaiman/csci-p-14110_su2020/master/lesson09/convert_kepler_data.py">Conversions Library (`convert_kepler_data.py`)</a>
+
 
 ### Data Downloads
 
