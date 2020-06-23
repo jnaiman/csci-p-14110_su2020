@@ -60,9 +60,7 @@ Acronyms for books:
 Students will demonstrate an understanding of data visualization as it relates to plotting datasets related to the orbits of planets around stars and/or motion of stars in galaxies.  By the end of the course, students will have a basic understanding of programming and  the “best practices” behind data visualization.  In particular, each student will be able to:	
  * Understand programming fundamentals of iterative programs, conditional statements and data input and output
  * Understand how to use the programming language Python to perform a variety of calculations
- * Have a basic understanding of how a computer solves equations that we cannot do analytically and be able to manipulate different computer solvers to do so.
  * Have a basic understanding of some of the considerations that go into making a scientific visualization - computer memory considerations, color, time sampling, etc
- * Make 2 and 3 dimensional movies from their scientific calculations
  * Have a basic understanding of the tools available to share both scientific and other forms of data visualization on the web including online notebooks and online 3D rendering software
 
 # Course Materials
@@ -82,9 +80,11 @@ Dr. Jill Naiman's background is in theoretical and computational astrophysics wi
 
 # Class Participation Policy	
 
-Leaders are expected to clearly articulate issues and problems and how analytical tools can help. The way we foster this in the course is that you must participate in the classroom discussion. You are not required to “speak up” during every class session, but you do need to attend and contribute to the class and/or forum discussion over the course.  
+Leaders are expected to clearly detail issues and problems and how analytical tools can help solve these issues. The way we foster this in the course is that you must participate in the classroom discussion. You are not required to “speak up” during every class session, but you do need to attend and contribute to the class and/or forum discussion over the course. 
 
 Leaders are also expected to foster productive environments for those around them. Those in this class come from a variety of backgrounds and comfort levels with the material and programming - it is expected that all students (and instructor!) will remain cognizant of this fact at all times and any demeaning language or behavior will not be tolerated.
+
+That being said, we are living through a hard and trying time in human history, so it may be hard to give your 100% in class and in assigments.  **This is normal.** The instructors will practice [maximum flexibility](https://medium.com/@annaeveryday/altered-is-the-fashion-of-the-earth-teaching-and-learning-during-a-global-pandemic-to-my-e08bd7e473c3) -- please reach out to us if you have any issues with assignments/reading/homeworks or participating in class.  We want to work with you so you can do your best!
 										
 # Academic Integrity	
 
