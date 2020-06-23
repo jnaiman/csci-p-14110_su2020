@@ -5,6 +5,9 @@
 # empty placeholders for different plots
 def plot_animations(fig, ax, t, r, E = None, nplots=1):
 
+    # number of energy plot, if requested
+    neng = nplots-1
+
     nFrames = len(t) #number frames in our animation
     n_part = r.shape[0] #number particles
 
@@ -29,12 +32,12 @@ def plot_animations(fig, ax, t, r, E = None, nplots=1):
         ax[0].set_ylabel('y in AU')
 
         if E is not None:
-            ax[1].set_xlim(t.min(),t.max())
-            ax[1].set_ylim(E.min(),E.max())
+            ax[neng].set_xlim(t.min(),t.max())
+            ax[neng].set_ylim(E.min(),E.max())
 
             # energy
-            ax[1].set_xlabel('Time in seconds')
-            ax[1].set_ylabel('Normalized Energy')
+            ax[neng].set_xlabel('Time in seconds')
+            ax[neng].set_ylabel('Normalized Energy')
     else:
         ax.set_xlim(r.min(), r.max())
         ax.set_ylim(r.min(), r.max())
