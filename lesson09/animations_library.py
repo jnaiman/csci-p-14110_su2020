@@ -3,7 +3,7 @@
 # assumes you want to do a x/y plot and an energy plot
 
 # empty placeholders for different plots
-def plot_animations(fig, ax, t, E, r):
+def plot_animations(fig, ax, t, r, E = None, nplots=1):
 
     nFrames = len(t) #number frames in our animation
     n_part = r.shape[0] #number particles
@@ -11,24 +11,37 @@ def plot_animations(fig, ax, t, E, r):
     # initialize our plots with empty data
     trajs = []
     for i in range(n_part):
-        tr, = ax[0].plot([],[])
+        if nplots > 1:
+            tr, = ax[0].plot([],[])
+        else:
+            tr, = ax.plot([],[])
         trajs.append(tr)
 
-    energy, = ax[1].plot([],[])
+    if E is not None:
+        energy, = ax[1].plot([],[])
 
     # set bounds based on data
-    ax[0].set_xlim(r.min(), r.max())
-    ax[0].set_ylim(r.min(), r.max())
+    if nplots > 1:
+        ax[0].set_xlim(r.min(), r.max())
+        ax[0].set_ylim(r.min(), r.max())
+        # names
+        ax[0].set_xlabel('x in AU')
+        ax[0].set_ylabel('y in AU')
 
-    ax[1].set_xlim(t.min(),t.max())
-    ax[1].set_ylim(E.min(),E.max())
+        if E is not None:
+            ax[1].set_xlim(t.min(),t.max())
+            ax[1].set_ylim(E.min(),E.max())
 
-    # names
-    ax[0].set_xlabel('x in AU')
-    ax[0].set_ylabel('y in AU')
-    # energy
-    ax[1].set_xlabel('Time in seconds')
-    ax[1].set_ylabel('Normalized Energy')
+            # energy
+            ax[1].set_xlabel('Time in seconds')
+            ax[1].set_ylabel('Normalized Energy')
+    else:
+        ax.set_xlim(r.min(), r.max())
+        ax.set_ylim(r.min(), r.max())
+        # names
+        ax.set_xlabel('x in AU')
+        ax.set_ylabel('y in AU')
+        
 
     # below are functions animation.FuncAnimation needs
     # we need to initialize stuff - just setting data
@@ -38,12 +51,14 @@ def plot_animations(fig, ax, t, E, r):
             #print(trajectory)
             trajectory.set_data([],[])
 
-        energy.set_data([], [])
+        if E is not None:
+            energy.set_data([], [])
 
         # note: we have to do some special formatting to 
         #  get the correct output form for animate function
         outarr = trajs.copy()
-        outarr.append(energy)
+        if E is not None:
+            outarr.append(energy)
         return tuple(outarr)
 
     # now, each time we step through
@@ -52,12 +67,14 @@ def plot_animations(fig, ax, t, E, r):
             trajectory.set_data(r[j,0,:i], 
                                  r[j,1,:i])
 
-        energy.set_data(t[:i], E[:i])
+        if E is not None:
+            energy.set_data(t[:i], E[:i])
 
         # note: we have to do some special formatting to 
         #  get the correct output form for animate function    
         outarr = trajs.copy()
-        outarr.append(energy)
+        if E is not None:
+            outarr.append(energy)
         return tuple(outarr)
 
     return init, animate, nFrames
