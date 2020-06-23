@@ -143,9 +143,9 @@ ProRes is only available on Apple, and DNxHD is Windows
 All 3D geometry is represented as:
 
 <div class="left">
-
- * Points
- 
+ <ul>
+ <li>Points</li>
+ </ul>
 </div>
 
 <div class="right">
@@ -162,9 +162,10 @@ notes: how do we represent geometry in space? one way is points...
 All 3D geometry is represented as:
 
 <div class="left">
-
- * Points
- * Edges
+ <ul>
+ <li>Points</li>
+ <li>Edges</li>
+ </ul>
  
 </div>
 
@@ -179,10 +180,12 @@ All 3D geometry is represented as:
 All 3D geometry is represented as:
 
 <div class="left">
+ <ul>
+ <li>Points</li>
+ <li>Edges</li>
+ <li>Surfaces</li>
+ </ul>
 
- * Points
- * Edges
- * Surfaces
  
 </div>
 
@@ -200,11 +203,12 @@ notes: we can connect these points and images to make surfaces
 All 3D geometry is represented as:
 
 <div class="left">
-
- * Points
- * Edges
- * Surfaces
- * Volumes
+ <ul>
+ <li>Points</li>
+ <li>Edges</li>
+ <li>Surfaces</li>
+ <li>Volumes</li>
+ </ul>
  
 </div>
 
@@ -236,8 +240,9 @@ You can convert between points, surfaces and volumes, ofthen to really cool effe
 Surfaces can be encoded as:
 
 <div class="left">
-
- * Implicit primitives
+ <ul>
+ <li>Implicit primitives</li>
+ </ul>
  
 </div>
 
@@ -256,9 +261,10 @@ primitives are defined by mathematical functions. This sphere is defined by a ce
 Surfaces can be encoded as:
 
 <div class="left">
-
- * Implicit primitives
- * Polygonal Meshes
+ <ul>
+ <li>Implicit primitives</li>
+ <li>Polygonal Meshes</li>
+ </ul>
  
 </div>
 
@@ -277,9 +283,10 @@ Quadrilaterals are a good way to see the flow of geometry, which artists like, b
 Surfaces can be encoded as:
 
 <div class="left">
-
- * Implicit primitives
- * Polygonal Meshes
+ <ul>
+ <li>Implicit primitives</li>
+ <li>Polygonal Meshes</li>
+ </ul>
  
 </div>
 
@@ -298,10 +305,11 @@ Triangles cannot bend because three points define a plane. So automatic geometry
 Surfaces can be encoded as:
 
 <div class="left">
-
- * Implicit primitives
- * Polygonal Meshes
- * NURBS or Bezier Surfaces
+ <ul>
+ <li>Implicit primitives</li>
+ <li>Polygonal Meshes</li>
+ <li>NURBS or Bezier Surfaces</li>
+ </ul>
  
 </div>
 
@@ -321,11 +329,13 @@ Here if I wanted to deform this surface, I could pull at one of the blue points 
 Surfaces can be encoded as:
 
 <div class="left">
+<ul>
+ <li>Implicit primitives</li>
+ <li>Polygonal Meshes</li>
+ <li>NURBS or Bezier Surfaces</li>
+ <li>Subdivision Surfaces</li>
+ </ul>
 
- * Implicit primitives
- * Polygonal Meshes
- * NURBS or Bezier Surfaces
- * Subdivision Surfaces
  
 </div>
 
@@ -344,8 +354,9 @@ Subdivision surfaces are like those adaptive volumes we saw last week. You can a
 Datasets with many fields called "attributes":
 
 <div class="left">
-
- 1. Transform Attributes (translate, rotate, scale)
+<ol>
+ <li>Transform Attributes (translate, rotate, scale)</li>
+ </ol>
  
 </div>
 
@@ -366,9 +377,10 @@ Recall we discussed some of these in earlier classes for 2D plots.  Same princip
 Datasets with many fields called "attributes":
 
 <div class="left">
-
- 1. Transform Attributes (translate, rotate, scale)
- 1. Shape Attributes (radius, bumpyness, twistyness)
+<ol>
+ <li>Transform Attributes (translate, rotate, scale)</li>
+ <li>Shape Attributes (radius, bumpyness, twistyness)</li>
+ </ol>
  
 </div>
 
@@ -531,8 +543,9 @@ this is a very dull and not-realistic looking image
 ## The Secrets of Photorealism
 
 <div class="left">
-
- 1. Lighting changes everything - use realistic light sources
+ <ol>
+ <li>Lighting changes everything - use realistic light sources</li>
+ </ol>
  
 </div>
 
@@ -546,9 +559,10 @@ this is a very dull and not-realistic looking image
 ## The Secrets of Photorealism
 
 <div class="left">
-
- 1. Lighting changes everything - use realistic light sources
- 1. Photographs have motion blur - use a motion blur algorithm
+ <ol>
+ <li>Lighting changes everything - use realistic light sources</li>
+ <li>Photographs have motion blur - use a motion blur algorithm</li>
+ </ol>
  
 </div>
 
@@ -562,10 +576,12 @@ this is a very dull and not-realistic looking image
 ## The Secrets of Photorealism
 
 <div class="left">
+ <ol>
+ <li>Lighting changes everything - use realistic light sources</li>
+ <li>Photographs have motion blur - use a motion blur algorithm</li>
+ <li>Photographs have depth of field - use a depth of field algorithm</li>
+ </ol>
 
- 1. Lighting changes everything - use realistic light sources
- 1. Photographs have motion blur - use a motion blur algorithm
- 1. Photographs have depth of field - use a depth of field algorithm
  
 </div>
 
@@ -578,11 +594,13 @@ this is a very dull and not-realistic looking image
 ## The Secrets of Photorealism
 
 <div class="left">
+ <ol>
+ <li>Lighting changes everything - use realistic light sources</li>
+ <li>Photographs have motion blur - use a motion blur algorithm</li>
+ <li>Photographs have depth of field - use a depth of field algorithm</li>
+ <li>Scenes need backgrounds - embed your dataset inside a contextual dataset</li>
+ </ol>
 
- 1. Lighting changes everything - use realistic light sources
- 1. Photographs have motion blur - use a motion blur algorithm
- 1. Photographs have depth of field - use a depth of field algorithm
- 1. Scenes need backgrounds - embed your dataset inside a contextual dataset
  
 </div>
 
@@ -595,12 +613,13 @@ this is a very dull and not-realistic looking image
 ## The Secrets of Photorealism
 
 <div class="left">
-
- 1. Lighting changes everything - use realistic light sources
- 1. Photographs have motion blur - use a motion blur algorithm
- 1. Photographs have depth of field - use a depth of field algorithm
- 1. Scenes need backgrounds - embed your dataset inside a contextual dataset
- 1. Indirect light is everywhere - use an "ambient occlusion" algorithm
+ <ol>
+ <li>Lighting changes everything - use realistic light sources</li>
+ <li>Photographs have motion blur - use a motion blur algorithm</li>
+ <li>Photographs have depth of field - use a depth of field algorithm</li>
+ <li>Scenes need backgrounds - embed your dataset inside a contextual dataset</li>
+ <li>Indirect light is everywhere - use an "ambient occlusion" algorithm</li>
+ </ol>
  
 </div>
 
@@ -613,13 +632,15 @@ this is a very dull and not-realistic looking image
 ## The Secrets of Photorealism
 
 <div class="left">
+<ol>
+ <li>Lighting changes everything - use realistic light sources</li>
+ <li>Photographs have motion blur - use a motion blur algorithm</li>
+ <li>Photographs have depth of field - use a depth of field algorithm</li>
+ <li>Scenes need backgrounds - embed your dataset inside a contextual dataset</li>
+ <li>Indirect light is everywhere - use an "ambient occlusion" algorithm</li>
+ <li>The world is fractal - increase detail with procedural noise and instancing</li>
+ </ol>
 
- 1. Lighting changes everything - use realistic light sources
- 1. Photographs have motion blur - use a motion blur algorithm
- 1. Photographs have depth of field - use a depth of field algorithm
- 1. Scenes need backgrounds - embed your dataset inside a contextual dataset
- 1. Indirect light is everywhere - use an "ambient occlusion" algorithm
- 1. The world is fractal - increase detail with procedural noise and instancing
  
 </div>
 

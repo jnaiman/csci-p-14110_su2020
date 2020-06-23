@@ -1,7 +1,7 @@
 # Our build file (using pydoit.org) for generating diagrams from all of our
 # .asy files.
 
-# We assume that all of our asy files are under lesson*/diagrams/ , and we want
+# We assume that all of our asy files are under week*/diagrams/ , and we want
 # to generate them into .svg files.  Sometimes, they generate multiple files,
 # so we'll parse them for the appropriate output filenames.
 
@@ -17,7 +17,7 @@ def get_shipouts(fn):
     return outfns
 
 def task_build_asy():
-    asy_files = sorted(glob.glob("lesson*/diagrams/*.asy"))
+    asy_files = sorted(glob.glob("week*/diagrams/*.asy"))
     for fn in asy_files:
         cd = os.path.normpath(
                 os.path.join(
