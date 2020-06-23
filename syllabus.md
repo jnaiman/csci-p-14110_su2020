@@ -76,7 +76,7 @@ each class.
 
 # About Your Instructor
 
-Dr. Jill Naiman's background is in theoretical and computational astrophysics with a current research emphasis on scientific data visualization.  She is currently a Visiting Scholar at the Advanced Visualization Lab at the National Center for Supercomputing Applications.  She is currently involved in projects related to increasing access to industry-standard special effects software for scientists - more info can be found <a href="http://ytini.com">here</a> and <a href="http://astroblend.com">here</a>.  Information about her research and outreach efforts can be found <a href="http://astronaiman.com">here</a>.
+Dr. Jill Naiman's background is in theoretical and computational astrophysics with a current research emphasis on scientific data visualization.  She is currently Teaching Faculty at the [iSchool, UIUC](https://ischool.illinois.edu/) and a Visiting Scholar at the Advanced Visualization Lab at the National Center for Supercomputing Applications.  She is currently involved in projects related to increasing access to industry-standard special effects software for scientists - more info can be found <a href="http://ytini.com">here</a> and <a href="http://astroblend.com">here</a>.  Information about her research and outreach efforts can be found <a href="http://astronaiman.com">here</a>.
 
 
 
