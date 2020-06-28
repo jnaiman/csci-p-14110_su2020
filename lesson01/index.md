@@ -50,6 +50,6 @@ Movie of this process:
 
 ## Reading
 
-1. Py4E: Ch. 1, 2, 6 & 8 (Note: some of this reading covers conditionals (Ch. 3) & iterations (Ch. 5) which are covered tomorrow in class.)
+1. Py4E: Ch. [1](https://www.py4e.com/html3/01-intro), [2](https://www.py4e.com/html3/02-variables), [6](https://www.py4e.com/html3/06-strings) & [8](https://www.py4e.com/html3/08-lists) <br> Note: some of this reading covers conditionals (Ch. 3) & iterations (Ch. 5) which are covered tomorrow in class
 1. *Optional:* [Intro to Jupyter Notebook Video](https://www.youtube.com/watch?v=3C9E2yPBw7s)
 1. *Optional:* [Software Carpentry Variables lesson](http://swcarpentry.github.io/python-novice-gapminder/02-variables/index.html) and [SC's conversion lesson](http://swcarpentry.github.io/python-novice-gapminder/03-types-conversion/index.html)

@@ -345,12 +345,12 @@ highlights:
    * lecture slides, coding "notebooks", reading outline, external resources
 1. Texts
    * Py4E: [Python for Everybody](https://www.py4e.com/book.php), HTML version [is linked right here](https://www.py4e.com/html3/)
-   * FDA: <a href="https://serialmentor.com/dataviz/">Fundamentals of Data Visualization</a> 
+   * FDV: <a href="https://serialmentor.com/dataviz/">Fundamentals of Data Visualization</a> 
    * Additional reading assigned by week, Optional/follow up books
 
 
 notes: 
-our two main books are Py4E (Python for Everybody) and FDA (Fundamentals of Data Visualization)
+our two main books are Py4E (Python for Everybody) and FDV (Fundamentals of Data Visualization)
 
 they are both free and available online
 
@@ -369,7 +369,7 @@ the theory behind a lot of what we are talking about in this class in brief.
    * lecture slides, coding "notebooks", reading outline, external resources
 1. Texts
    * Py4E: [Python for Everybody](https://www.py4e.com/book.php), HTML version [is linked right here](https://www.py4e.com/html3/)
-   * FDA: <a href="https://serialmentor.com/dataviz/">Fundamentals of Data Visualization</a> 
+   * FDV: <a href="https://serialmentor.com/dataviz/">Fundamentals of Data Visualization</a> 
    * Additional reading assigned by week, Optional/follow up books
 1. Canvas Page: https://canvas.harvard.edu/courses/72794
    * This is where quizzes and homeworks will be assigned and turned in.
@@ -384,7 +384,7 @@ notes: Homework & quizzes will be turned in on the canvas webpage
    * lecture slides, coding "notebooks", reading outline, external resources
 1. Texts
    * Py4E: [Python for Everybody](https://www.py4e.com/book.php), HTML version [is linked right here](https://www.py4e.com/html3/)
-   * FDA: <a href="https://serialmentor.com/dataviz/">Fundamentals of Data Visualization</a> 
+   * FDV: <a href="https://serialmentor.com/dataviz/">Fundamentals of Data Visualization</a> 
    * Additional reading assigned by week, Optional/follow up books
 1. Canvas Page: https://canvas.harvard.edu/courses/72794
    * This is where quizzes and homeworks will be assigned and turned in.
@@ -409,7 +409,7 @@ We'll go over how to install later in class, but lets all get it downloaded firs
    * lecture slides, coding "notebooks", reading outline, external resources
 1. Texts
    * Py4E: [Python for Everybody](https://www.py4e.com/book.php), HTML version [is linked right here](https://www.py4e.com/html3/)
-   * FDA: <a href="https://serialmentor.com/dataviz/">Fundamentals of Data Visualization</a> 
+   * FDV: <a href="https://serialmentor.com/dataviz/">Fundamentals of Data Visualization</a> 
    * Additional reading assigned by week, Optional/follow up books
 1. Canvas Page: https://canvas.harvard.edu/courses/72794
    * This is where quizzes and homeworks will be assigned and turned in.
