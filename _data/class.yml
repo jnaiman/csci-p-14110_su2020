@@ -1,25 +1,25 @@
 instructor: 
   name: Jill P. Naiman
   email: jnaiman@illinois.edu, jill.naiman@cfa.harvard.edu
-  office: TBD
-  office_hours: TBD
+  office: Zoom Room
+  office_hours: M-F, 4-6pm EST
 tas:
   -
-    name: Monica
-    email: TBD
-    office: TBD
+    name: Monica Gallegos-Garcia
+    email: monicagallegosgarcia2024@u.northwestern.edu
+    office: Zoom
     office_hours: TBD
 course:
   name: Intro to Programming and Data Viz
   number: CSCI P-14110
   semester: Summer 2020
-  location: Campus
+  location: Zoom
   time: M/T/W/Th/F, 12-3pm (EST)
   credit_hours: NA
 urls:
   -
     name: Canvas Page
-    url: TBD
+    url: https://canvas.harvard.edu/courses/72794
   -
     name: Slack
     url: TBD
