@@ -16,13 +16,13 @@ visible_n: true
 <!-- .slide: class="vertical_center" -->
 ## Basics
 
-12-3PM M/T/W/Th/F
+12-3PM M/T/W/Th/F (EST)
 
 Jill Naiman - `jnaiman@illinois.edu` or `jill.naiman@cfa.harvard.edu`
 
- * Office Hours: TBD
+ * Office Hours: M-F, 4-6pm (EST)
 
-TA: TBD
+TA: Monica Gallegos-Garcia - `monicagallegosgarcia2024@u.northwestern.edu`
 
 Class webpage: https://jnaiman.github.io/csci-p-14110_su2020/ (more on this a little later)
 
@@ -576,7 +576,20 @@ your own.  Always cite, and be reasonable in what you utilize.
 notes:
 You will be expected to write code in Python.  Slack will be used for communications.
 
-We'll also cover a bit of javascript, html for online viz, but that will mostly be "for your interest" and not something you need to dig deep into.
+---
+
+## Our tools
+
+ * Python
+ * Jupyter and Jupyter notebooks (maybe on a Jupyterhub)
+ * The occasional usage of a shell such as bash
+ * Slack
+
+**OPTIONAL**:
+ * [Google cardboard](https://arvr.google.com/cardboard/) or any other VR viewer (we'll use this on the last day)
+
+notes:
+Optional are getting your hands on some VR-type headsets
 
 
 
