@@ -1,6 +1,6 @@
 ---
 layout: lesson
-visible: false
+visible: true
 ---
 
 # Lesson 2 - More intro to programming, flow control
