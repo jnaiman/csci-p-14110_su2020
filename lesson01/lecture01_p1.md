@@ -416,7 +416,7 @@ We'll go over how to install later in class, but lets all get it downloaded firs
 1. Anaconda: [https://www.anaconda.com/distribution/#download-section](https://www.anaconda.com/distribution/#download-section)
    * For now - just download this file, we'll talk about how to use it later in class
    * __Make sure you download Python version 3 not 2!!__
-1. Slack channel: TBD
+1. Slack channel: csci-p14110.slack.com
    * Use as professional adults
 
 notes: We'll also have a slack channel - use this as adults, so no bad words, no put-downs, etc
