@@ -5,9 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
 
 <!-- Begin Jekyll SEO tag v2.6.1 -->
-<title>CSCI P-14110 Introduction to Programming, Computational Science, and Data Visualization | This is the course website CSCI P-14110</title>
+<title>Conda environment with environment.yml | CSCI P-14110 Introduction to Programming, Computational Science, and Data Visualization</title>
 <meta name="generator" content="Jekyll v3.8.7" />
-<meta property="og:title" content="CSCI P-14110 Introduction to Programming, Computational Science, and Data Visualization" />
+<meta property="og:title" content="Conda environment with environment.yml" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="This is the course website CSCI P-14110" />
 <meta property="og:description" content="This is the course website CSCI P-14110" />
@@ -15,7 +15,7 @@
 <meta property="og:url" content="http://localhost:4008/csci-p-14110_su2020/mybinderLinks/" />
 <meta property="og:site_name" content="CSCI P-14110 Introduction to Programming, Computational Science, and Data Visualization" />
 <script type="application/ld+json">
-{"description":"This is the course website CSCI P-14110","@type":"WebPage","headline":"CSCI P-14110 Introduction to Programming, Computational Science, and Data Visualization","url":"http://localhost:4008/csci-p-14110_su2020/mybinderLinks/","@context":"https://schema.org"}</script>
+{"description":"This is the course website CSCI P-14110","@type":"WebPage","headline":"Conda environment with environment.yml","url":"http://localhost:4008/csci-p-14110_su2020/mybinderLinks/","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
     <link href='https://fonts.googleapis.com/css?family=Arvo:400,700,400italic' rel='stylesheet' type='text/css'>
@@ -40,7 +40,38 @@
       </header>
 
       <section>
-        <p><a href="https://mybinder.org/v2/gh/jnaiman/csci-p-14110_su2020/master?filepath=mybinderLinks%2Ftest_imports_lesson01.ipynb"><img src="https://mybinder.org/badge_logo.svg" alt="Binder" /></a></p>
+        <h1 id="conda-environment-with-environmentyml">Conda environment with environment.yml</h1>
+
+<p><a href="http://mybinder.org/v2/gh/binder-examples/conda_environment/master?filepath=index.ipynb"><img src="http://mybinder.org/badge_logo.svg" alt="Binder" /></a></p>
+
+<p>A Binder-compatible repo with an <code class="language-plaintext highlighter-rouge">environment.yml</code> file.</p>
+
+<p>Access this Binder by clicking the blue badge above or at the following URL:</p>
+
+<p>http://mybinder.org/v2/gh/binder-examples/conda_environment/master?filepath=index.ipynb</p>
+
+<h2 id="notes">Notes</h2>
+<p>The <code class="language-plaintext highlighter-rouge">environment.yml</code> file should list all Python libraries on which your notebooks
+depend, specified as though they were created using the following <code class="language-plaintext highlighter-rouge">conda</code> commands:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>conda activate example-environment
+conda env export --from-history -f environment.yml
+</code></pre></div></div>
+
+<p>Note that the only libraries available to you will be the ones specified in
+the <code class="language-plaintext highlighter-rouge">environment.yml</code>, so be sure to include everything that you need!</p>
+
+<p>Also note that if you skip the <code class="language-plaintext highlighter-rouge">--from-history</code>, conda may include OS-specific
+packages in <code class="language-plaintext highlighter-rouge">environment.yml</code>, which you would have to manually prune from
+<code class="language-plaintext highlighter-rouge">environment.yml</code>.  For example, confirmed macOS-specific packages that should
+be removed are:</p>
+
+<ul>
+  <li>libcxxabi=4.0.1</li>
+  <li>appnope=0.1.0</li>
+  <li>libgfortran=3.0.1</li>
+  <li>libcxx=4.0.1</li>
+</ul>
 
       </section>
 
