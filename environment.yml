@@ -15,3 +15,4 @@ dependencies:
   - h5py
   - descartes
   - ipyvolume
+  - ffmpeg
