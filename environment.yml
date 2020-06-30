@@ -10,3 +10,4 @@ dependencies:
   - bqplot
   - geopandas
   - contextily
+  - scipy
