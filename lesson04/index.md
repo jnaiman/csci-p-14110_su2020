@@ -1,6 +1,6 @@
 ---
 layout: lesson
-visible: false
+visible: true
 ---
 
 # Lesson 4 - Intro to Data Viz & More with Pandas
