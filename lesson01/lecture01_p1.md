@@ -7,7 +7,9 @@ visible_n: true
 <!-- .slide: class="titleslide" -->
 
 # Intro to Programming & Data Viz
+
 <div style="height: 6.0em;"></div>
+
 ## Jill P. Naiman
 ## Summer 2020
 ## Lecture 1
