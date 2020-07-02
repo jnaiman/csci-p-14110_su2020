@@ -20,7 +20,7 @@ Some handy references you might appreciate:
 
  * [matplotlib tutorial](https://matplotlib.org/tutorials/index.html)
  * [python tutorial](https://docs.python.org/3.6/tutorial/)
- * [Markdown Cheat Sheet](https://www.ibm.com/support/knowledgecenter/SSQNUZ_current/com.ibm.icpdata.doc/dsx/markd-jupyter.html)
+ * [Markdown Cheat Sheet](https://medium.com/ibm-data-science-experience/markdown-for-jupyter-notebooks-cheatsheet-386c05aeebed)
  * [Jupyter Cheat Sheet](https://www.dataquest.io/blog/jupyter-notebook-tips-tricks-shortcuts/)
  * [Windows-to-Mac Commands Conversion Cheat Sheet](https://www.lemoda.net/windows/windows2unix/windows2unix.html)
 
