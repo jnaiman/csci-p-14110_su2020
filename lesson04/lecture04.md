@@ -16,6 +16,10 @@ visible_n: true
 
 ---
 
+## Let's check out HW#2!
+
+---
+
 ## Last time
 
 * functions
