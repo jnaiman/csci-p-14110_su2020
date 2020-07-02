@@ -1,6 +1,6 @@
 ---
 layout: lesson
-visible: false
+visible: true
 ---
 
 # Lesson 7 - Intro to maps, beginning interactivity with ipywidgets
