@@ -1,6 +1,6 @@
 ---
 layout: lesson
-visible: false
+visible: true
 ---
 
 # Lesson 8 - Linked views with bqplot & Intro to the Planetary Dataset
