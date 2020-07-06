@@ -7,6 +7,9 @@ visible: false
 
 ## Resources
 
+### Online 3D viewers
+ * [creators3d.com](https://www.creators3d.com/online-viewer)
+
 #### Kepler Planets info
 
  * [Exoplanet Archive - see "Data --> Confirmed Planets" option (hover over "Data")](https://exoplanetarchive.ipac.caltech.edu/)
