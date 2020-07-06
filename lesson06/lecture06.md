@@ -431,7 +431,7 @@ When we start combining them though, it can get a little more confusing.
 
  * Resources:
   * [colorbrewer](http://colorbrewer2.org)
-  * [palettable](www.palettable.io) (package)
+  * [palettable](https://jiffyclub.github.io/palettable/) (package)
 
 notes:
 there are a million websites that allow you to create color palettes
