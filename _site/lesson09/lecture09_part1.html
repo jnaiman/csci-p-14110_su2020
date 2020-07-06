@@ -562,7 +562,60 @@ Order:
 notes:
 so what we want is something like this where we have a bunch of planetary orbits of systems from kepler
 
-we'll start with some 2D and 3D movies in Python and then export our models to Sketchfab for cool 3D interactive things 
+we'll start with some 2D and 3D movies in Python and then export our models to Sketchfab for cool 3D interactive things
+
+---
+
+## Sci-Viz of planetary orbits
+
+<img src="https://media3.giphy.com/media/h8sRbOtj55JACfGn8R/giphy.gif">
+
+Order:
+ * generate some 2D movies of planetary orbits from <font color="red">simulated data</font>
+ * make them 3D!
+ * upload with planet "textures" to Sketchfab (tomorrow)
+
+notes:
+what do I mean by "simulated data" here?
+
+---
+
+## NBody Simulation for planet orbits
+
+"In physics and astronomy, an [N-body simulation](https://en.wikipedia.org/wiki/N-body_simulation) is a simulation of a dynamical system of particles, usually under the influence of physical forces, such as gravity."
+
+
+notes:
+here when I say "simulated data" I am specifically talking about a kind of simulation called an "nbody simulation"
+
+---
+
+
+## NBody Simulation for planet orbits
+
+"In physics and astronomy, an [N-body simulation](https://en.wikipedia.org/wiki/N-body_simulation) is a simulation of a dynamical system of particles, usually under the influence of physical forces, such as gravity."
+
+<img src="https://camo.githubusercontent.com/eeb77d963a6cb46b4dda8005a545c00ae3ebb559/687474703a2f2f74726f796b6c696e672e636f6d2f66696c65732f636c7573746572735f66756c6c2e676966">
+
+
+notes:
+here is an example of this -- we have a set of particles and we have them all interacting under the force of gravity -- so eventually they all end up in a little blob because gravity is a attractive force
+
+
+---
+
+## NBody Simulation for planet orbits
+
+"In physics and astronomy, an [N-body simulation](https://en.wikipedia.org/wiki/N-body_simulation) is a simulation of a dynamical system of particles, usually under the influence of physical forces, such as gravity."
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Animation_of_Voyager_2_trajectory.gif/300px-Animation_of_Voyager_2_trajectory.gif">
+
+notes:
+the planetary systems we will be interested in there are only a few "bodies" so N will be something like 2-10
+
+here is an Nbody planetary simulation with the voyeger 2 satellite's trajectory -- you can see it grazes by a few of the planets in our solar system!
+
+Sun in yellow at the center, and dark blue is our orbit then it goes past jupiter, then satern then uranus and then neptune
 
 ---
 
