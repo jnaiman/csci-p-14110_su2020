@@ -15,6 +15,7 @@ visible: true
 ### Data Downloads
 
  * <a href="https://uiuc-ischool-dataviz.github.io/spring2019online/week01/images/stitch_reworked.png" download>Reworked Stitch Image</a>
+ * For the example HW: <a href="littleCorgiInHat.png" download>Dog in Hat image</a>
 
 
 ### Reading
