@@ -25,8 +25,8 @@ You made it to the last day!!  Hurray you did it!!
 ### Data Downloads
 
  * We'll be using this <a href="https://jnaiman.github.io/csci-p-14110_su2020/lesson08/planets_2020.06.22_10.10.17.csv" download>NASA planet database CSV file (planets\_2020.06.22\_10.10.17.csv)</a> today.
- * And this <a href="https://github.com/jnaiman/csci-p-14110_su2020/raw/master/lesson09/data.zip" download>set of simulated orbits (data.zip, 81M)</a> today.
- * And this <a href="https://github.com/jnaiman/csci-p-14110_su2020/raw/master/lesson09/data.zip" download>set of simulated orbits (data.zip, 81M)</a> today.
+ * And this <a href="https://github.com/jnaiman/csci-p-14110_su2020/raw/master/lesson09/data.zip" download>set of simulated orbits (data.zip, 81M)</a> today,
+ * And this <a href="https://github.com/jnaiman/csci-p-14110_su2020/raw/master/lesson09/data.zip" download>this set of generic planet 3D model files</a> today.
 
 
 ### Reading

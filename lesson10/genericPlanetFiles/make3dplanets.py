@@ -18,7 +18,7 @@ def make3dplanets(SystemName, r_h, PlanetRadiusIn, output_planet_dir,
                   generic_dir, colors = None, textures_dir = 'textureMaps/', 
                   texture_file=None, fnum = None, DistanceUnits=AUinCM, 
                  radii_units = 'Jupiter', distance_units = 'AU', 
-                  planet_radius_format = 'hermite', Nplot = 0):# , mass_units = 'Jupiter'): 
+                  planet_radius_format = 'hermite', Nplot = 0, noVN = True):# , mass_units = 'Jupiter'): 
     # units for the origional generic file
     #Re = 6.371e8 # radius of earth in cm
     #Rarb = 100.0 # to look good on sketchfab, use this to scale things
@@ -228,7 +228,11 @@ def make3dplanets(SystemName, r_h, PlanetRadiusIn, output_planet_dir,
         
     f = open(outname+fname, 'w')
     for i in range(0,len(y)):
-        f.write(y[i].replace('\r\n', os.linesep))
+        if noVN:
+            if 'vn ' not in y[i]:
+                f.write(y[i].replace('\r\n', os.linesep))
+        else:
+            f.write(y[i].replace('\r\n', os.linesep))
 
     f.close()
 
