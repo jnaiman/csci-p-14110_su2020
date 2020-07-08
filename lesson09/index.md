@@ -16,6 +16,10 @@ visible: true
  * [Exoplanet orbit database (deprecated, but with plots)](http://exoplanets.org/)
  * [astroquery API](https://astroquery.readthedocs.io/en/latest/exoplanet_orbit_database/exoplanet_orbit_database.html)
 
+### Planet viz
+
+ * [Super Planet Crash Game](http://www.stefanom.org/spc)
+
 
 ### Python Library downloads
 
