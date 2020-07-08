@@ -756,10 +756,20 @@ We talked about this in abstract but today we'll get practicle:
 
 ---
 
+## Where we are going
+
+<div style="float:center;width:98%;margin-right:14px;" class="sketchfab-embed-wrapper"><iframe width="800" height="500" src="https://sketchfab.com/models/ece18031ea59414f8b4a506a7d45a62e/embed" frameborder="0" allow="autoplay; fullscreen; vr" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+
+notes:
+just a reminder of where we are going -- we're goingt make some interactive movies with your 3D data
+
+---
+
 ## Software
 
 1. Setup a Sketchfab account
-1. Download MeshLab (Mac) *or* OTHER for windows
+1. Local: Download MeshLab (Mac) *or* 3Dviewer for windows
+1. Web: [Creators3d online viewer](https://www.creators3d.com/online-viewer)
 
 notes: actually pause in class to do this!
 
@@ -818,6 +828,7 @@ notes: our material files can give us information about background colors (which
 ---
 
 <!-- .slide: data-background-image="images/objFiles/objFiles.004.jpeg" data-background-size="auto 95%" -->
+
 
 notes: you will use these files to import into MeshLab and upload to sketchfab
 
