@@ -1,6 +1,6 @@
 ---
 layout: lesson
-visible: false
+visible: true
 ---
 
 # Lesson 9 - Sci Viz vs. Info viz, Movies - 2D & 3D, Publish your viz (optional)
