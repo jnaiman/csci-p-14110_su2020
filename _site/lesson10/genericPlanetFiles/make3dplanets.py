@@ -17,7 +17,7 @@ import numpy as np
 def make3dplanets(SystemName, r_h, PlanetRadiusIn, output_planet_dir,  
                   generic_dir, colors = None, textures_dir = 'textureMaps/', 
                   texture_file=None, fnum = None, DistanceUnits=AUinCM, 
-                 radii_units = 'Jupiter', distance_units = 'AU', verbose=True,
+                 radii_units = 'Jupiter', distance_units = 'AU', verbose=True, movie=False,
                   planet_radius_format = 'hermite', Nplot = 0, noVN = True):# , mass_units = 'Jupiter'): 
     # units for the origional generic file
     #Re = 6.371e8 # radius of earth in cm
@@ -40,7 +40,12 @@ def make3dplanets(SystemName, r_h, PlanetRadiusIn, output_planet_dir,
         os.makedirs(output_planet_dir)
 
     # wipe files if already files in a directory
-    if os.path.isdir(output_planet_dir + SystemName + '/'):
+    overwrite = False
+    if os.path.isdir(output_planet_dir + SystemName + '/'): overwrite = True
+    # unless a movie
+    if movie:
+        if fnum > 0: overwrite = False
+    if overwrite:
         if verbose: print('Going to overwrite files in ', output_planet_dir + SystemName + '/')
         for filename in os.listdir(output_planet_dir + SystemName + '/'):
             file_path = os.path.join(output_planet_dir + SystemName + '/', filename)
