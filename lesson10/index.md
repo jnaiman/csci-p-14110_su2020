@@ -1,6 +1,6 @@
 ---
 layout: lesson
-visible: false
+visible: true
 ---
 
 # Lesson 10 - 3D graphics concepts, Online interactive 3D geometry with Sketchfab
