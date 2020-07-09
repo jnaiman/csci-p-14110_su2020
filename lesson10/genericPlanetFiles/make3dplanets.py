@@ -17,7 +17,7 @@ import numpy as np
 def make3dplanets(SystemName, r_h, PlanetRadiusIn, output_planet_dir,  
                   generic_dir, colors = None, textures_dir = 'textureMaps/', 
                   texture_file=None, fnum = None, DistanceUnits=AUinCM, 
-                 radii_units = 'Jupiter', distance_units = 'AU', 
+                 radii_units = 'Jupiter', distance_units = 'AU', verbose=True,
                   planet_radius_format = 'hermite', Nplot = 0, noVN = True):# , mass_units = 'Jupiter'): 
     # units for the origional generic file
     #Re = 6.371e8 # radius of earth in cm
@@ -36,12 +36,12 @@ def make3dplanets(SystemName, r_h, PlanetRadiusIn, output_planet_dir,
         
     # check for highlevel output planet directory
     if not os.path.isdir(output_planet_dir):
-        print('making directory: ', output_planet_dir)
+        if verbose: print('making directory: ', output_planet_dir)
         os.makedirs(output_planet_dir)
 
     # wipe files if already files in a directory
     if os.path.isdir(output_planet_dir + SystemName + '/'):
-        print('Going to overwrite files in ', output_planet_dir + SystemName + '/')
+        if verbose: print('Going to overwrite files in ', output_planet_dir + SystemName + '/')
         for filename in os.listdir(output_planet_dir + SystemName + '/'):
             file_path = os.path.join(output_planet_dir + SystemName + '/', filename)
             try:
@@ -54,7 +54,7 @@ def make3dplanets(SystemName, r_h, PlanetRadiusIn, output_planet_dir,
     
     # check units
     if (radii_units == 'Jupiter') and (distance_units == 'AU') :
-        print('Assuming radii are in Jupiter units except for the last particle which should have solar units, distances in AU... if not things are going to look weird!')
+        if verbose: print('Assuming radii are in Jupiter units except for the last particle which should have solar units, distances in AU... if not things are going to look weird!')
         
     # check planet formatting
     if planet_radius_format == 'hermite':
@@ -76,7 +76,7 @@ def make3dplanets(SystemName, r_h, PlanetRadiusIn, output_planet_dir,
 
     # do some checking
     if (colors is None) and (texture_file is None):
-        print('no colors/textures specified -- generating random colors!')
+        if verbose: print('no colors/textures specified -- generating random colors!')
         # generate random colors
         red,green,blue = np.random.random(len(PlanetRadius)), np.random.random(len(PlanetRadius)), np.random.random(len(PlanetRadius))
         # format properly
