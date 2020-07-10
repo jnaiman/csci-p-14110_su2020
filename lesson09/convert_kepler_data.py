@@ -61,6 +61,8 @@ def convert_kepler_data(planet_data, select_random_ecc=False, use_inclination_3d
     # say "base" is first planet, offset all other planets from there
     planet_initial_position[0,:] = [-a[0]*(1.0 - ecc[0]), 0., 0.] # in AU
     planet_initial_velocity[0,:] = [0.0, -np.sqrt( G*star_mass*MassOfSun*(1.0-ecc[0])/(a[0]*AUinCM) )/kmincm, 0.]
+    if use_inclination_3d:
+        planet_data['Incl'][planet_data['Incl']==0.0] = 90.0
     for i in range(1, len(planet_masses)):
         if use_inclination_3d:
             sigma = planet_data['Incl'][i]#-3
